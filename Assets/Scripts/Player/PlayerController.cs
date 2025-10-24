@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(PlayerHealth))]
 public class PlayerController : MonoBehaviour
 {
     [Range(0f, 30f)]
@@ -26,6 +27,8 @@ public class PlayerController : MonoBehaviour
 
     public float DegreesPerSecond { get => rotationSpeed; set => rotationSpeed = value; }
     public float MoveSpeed { get => moveSpeed; set => moveSpeed = value; }
+
+    public float CurrentRotationAngle { get => body.rotation; set => body.rotation = value; }
 
     private void Awake()
     {

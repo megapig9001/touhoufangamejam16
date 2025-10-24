@@ -145,6 +145,7 @@ GameObject:
   - component: {fileID: 6380798455946589520}
   - component: {fileID: 7815826129915232942}
   - component: {fileID: 3629851311627326887}
+  - component: {fileID: 3508113455890310528}
   m_Layer: 0
   m_Name: TestPlayer
   m_TagString: Untagged
@@ -209,10 +210,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
+  fastMoveSpeedMultiplier: 1.5
   rotationSpeed: 50
   knockbackTime: 0.2
   knockbackForce: 15
   knockbackRotationForce: 50
+--- !u!114 &3508113455890310528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6757346364252871479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73e15b18ac893fa43a52edd6fd8e669f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseHealth: 3
+  playerInvulnerabilitySeconds: 2
+  playerSpriteRenderer: {fileID: 1172128276209386231}
 --- !u!1 &8808622589410236249
 GameObject:
   m_ObjectHideFlags: 0
