@@ -9,38 +9,40 @@ public class PlayerHealth : MonoBehaviour
     private int baseHealth = 3;
     public int BaseHealth { get => baseHealth; }
 
-
-    private int CurrentHealth { get; set; }
+    private int currentHealth;
+    public int CurrentHealth { get => currentHealth; }
 
     [SerializeField] [Range(0, 10f)]
     private float playerInvulnerabilitySeconds = 2;
 
     private Coroutine handlingOnHitInvulnerability;
 
-    public bool CanTakeDamage { get; set; }
+    public bool CanTakeDamage { get; set; } = true;
 
     [SerializeField]
     private SpriteRenderer playerSpriteRenderer;
 
     private void Awake()
     {
-        CurrentHealth = BaseHealth;
+        SetHealth(baseHealth);
     }
 
-    private void OnCollisionStay2D(Collision2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
+        JSAM.AudioManager.PlaySound(AudioLibrarySounds.Hit);
         if (!CanTakeDamage || handlingOnHitInvulnerability != null)
             return;
 
         TakeDamage(1);
 
-        if (CurrentHealth == 0)
+        if (CurrentHealth != 0)
         {
-            TempKillPlayer();
-            return;
+            handlingOnHitInvulnerability = StartCoroutine(HandleInvulnerability());
         }
-
-        handlingOnHitInvulnerability = StartCoroutine(HandleInvulnerability());
+        else
+        {
+            new EventManager.PlayerDeathEvent().InvokeEvent();
+        }
     }
 
     private IEnumerator HandleInvulnerability()
@@ -57,40 +59,39 @@ public class PlayerHealth : MonoBehaviour
 
     public void TakeDamage(int damageValue)
     {
-        CurrentHealth -= damageValue;
+        int newHealthValue = currentHealth - damageValue;
 
-        if(CurrentHealth <= 0)
+        if(newHealthValue <= 0)
         {
-            CurrentHealth = 0;
+            SetHealth(0);
         }
-        Debug.Log($"CurrentHealth = {CurrentHealth}");
+        else
+        {
+            SetHealth(newHealthValue);
+        }
     }
 
+    /// <summary>
+    /// Set the current health of the player. Equivalent to setting CurrentHealth = value
+    /// </summary>
+    /// <param name="value"></param>
     public void SetHealth(int value)
     {
-        CurrentHealth = value > BaseHealth ? BaseHealth : value;
-        Debug.Log($"CurrentHealth = {CurrentHealth}");
+        currentHealth = value > baseHealth ? baseHealth : value;
+
+        EventManager.PlayerHealthChangeEvent e = new EventManager.PlayerHealthChangeEvent();
+        e.newCurrentHealth = currentHealth;
+        e.InvokeEvent();
     }
 
-    ///Temp code for early testing
-    public Vector2 RespawnPosition { get; set; }
 
-    private void Start()
-    {
-        RespawnPosition = transform.position;
-    }
-    private void TempKillPlayer()
+    public void ResetPlayer()
     {
         StopAllCoroutines();
+        handlingOnHitInvulnerability = null;
 
-        PlayerController controller = GetComponent<PlayerController>();
-        controller.StopAllCoroutines();
-        controller.CurrentRotationAngle = 0;
-        controller.PlayerInputDisabled = false;
-        controller.RotationDisabled = false;
-
-        transform.position = RespawnPosition;
-        CurrentHealth = BaseHealth;
+        SetHealth(BaseHealth);
+        playerSpriteRenderer.color = Color.white;
     }
 
     public void SetPlayerSpriteColor(Color color)

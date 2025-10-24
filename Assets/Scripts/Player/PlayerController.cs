@@ -7,13 +7,19 @@ using UnityEngine.InputSystem;
 public class PlayerController : MonoBehaviour
 {
     [Range(0f, 30f)]
+    [Tooltip("The base move speed of the player.")]
     [SerializeField] private float moveSpeed = 5;
+    public float StartingSpeed { get; private set; }
 
     [Range(0f, 10f)]
     [SerializeField] private float fastMoveSpeedMultiplier = 1.5f;
 
-    [Range(-360f, 360f)]
+    [Range(0, 360f)]
+    [Tooltip("The base rotation speed (clockwise) of the player.")]
     [SerializeField] private float rotationSpeed  = 35;
+    public float StartingRotationSpeed { get; private set; }
+
+    private bool flipRotation = false;
 
     [SerializeField] private float knockbackTime = 0.2f;
 
@@ -25,14 +31,16 @@ public class PlayerController : MonoBehaviour
     public bool PlayerInputDisabled { get; set; }
     public bool RotationDisabled { get; set; }
 
-    public float DegreesPerSecond { get => rotationSpeed; set => rotationSpeed = value; }
-    public float MoveSpeed { get => moveSpeed; set => moveSpeed = value; }
+    public float CurrentDegreesPerSecond { get => rotationSpeed * RotationDirection(); set => rotationSpeed = value; }
+    public float CurrentMoveSpeed { get => moveSpeed; set => moveSpeed = value; }
 
     public float CurrentRotationAngle { get => body.rotation; set => body.rotation = value; }
 
     private void Awake()
     {
         body = GetComponent<Rigidbody2D>();
+        StartingRotationSpeed = rotationSpeed;
+        StartingSpeed = moveSpeed;
     }
 
     // Update is called once per frame
@@ -53,7 +61,7 @@ public class PlayerController : MonoBehaviour
             return;
         }
 
-        float angle = body.rotation + DegreesPerSecond * Time.fixedDeltaTime;
+        float angle = body.rotation + CurrentDegreesPerSecond * Time.fixedDeltaTime;
         body.MoveRotation(angle);
 
         if (Mathf.Abs(body.rotation) >= 360)
@@ -64,7 +72,34 @@ public class PlayerController : MonoBehaviour
 
     public void ReverseRotation()
     {
-        rotationSpeed *= -1;
+        flipRotation = flipRotation == false;
+    }
+
+    /// <summary>
+    /// Returns -1 if the player is currently rotating counter-clockwise.
+    /// </summary>
+    /// <returns></returns>
+    public int RotationDirection()
+    {
+        return flipRotation ? -1 : 1;
+    }
+
+    /// <summary>
+    /// When parameters of the player (like speed, health, rotation, etc) need to be reset.
+    /// Such as when the player respawns.
+    /// </summary>
+    public void ResetPlayer()
+    {
+        StopAllCoroutines();
+        CurrentRotationAngle = 0;
+        PlayerInputDisabled = false;
+        RotationDisabled = false;
+        flipRotation = false;
+        moveSpeed = StartingSpeed;
+        rotationSpeed = StartingRotationSpeed;
+
+        PlayerHealth healthController = GetComponent<PlayerHealth>();
+        healthController.ResetPlayer();
     }
 
     private void HandleMovement()
@@ -77,7 +112,7 @@ public class PlayerController : MonoBehaviour
 
         if (canMoveWithInput)
         {
-            float speed = Keyboard.current.zKey.isPressed ? MoveSpeed * fastMoveSpeedMultiplier : MoveSpeed;
+            float speed = Keyboard.current.zKey.isPressed ? CurrentMoveSpeed * fastMoveSpeedMultiplier : CurrentMoveSpeed;
 
             if (Mathf.Abs(xInput) > 0.001)
             {
@@ -100,8 +135,6 @@ public class PlayerController : MonoBehaviour
     {
         PlayerInputDisabled = true;
         RotationDisabled = true;
-
-        JSAM.AudioManager.PlaySound(AudioLibrarySounds.Hit);
 
         body.linearVelocity = new Vector2(body.position.x - collision.GetContact(0).point.x, body.position.y - collision.GetContact(0).point.y).normalized
             * knockbackForce;
