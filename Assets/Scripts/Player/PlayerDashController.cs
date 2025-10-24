@@ -11,7 +11,9 @@ public class PlayerDashController : MonoBehaviour
     [Range(0f, 7f)]
     public float dashAccelerationRate = 1.5f;
 
-    public bool canDash = true;
+    [SerializeField] bool enableDashByDefault = false;
+
+    public bool dashEnabled { get; set; }
 
     private PlayerController playerController;
     private Rigidbody2D body;
@@ -26,15 +28,15 @@ public class PlayerDashController : MonoBehaviour
     {
         playerController = GetComponent<PlayerController>();
         body = GetComponent<Rigidbody2D>();
+        dashEnabled = enableDashByDefault;
     }
 
     private void Update()
     {
-        if (Keyboard.current.xKey.isPressed)
+        if (dashEnabled && Keyboard.current.xKey.isPressed)
         {
             if (!isDashing && !playerController.InHitstun)
             {
-                isDashing = true;
                 handlingDash = StartCoroutine(HandleDash());
             }
         }
@@ -42,7 +44,7 @@ public class PlayerDashController : MonoBehaviour
 
     private IEnumerator HandleDash()
     {
-        Debug.Log("Dashing");
+        isDashing = true;
         playerController.RotationDisabled = true;
         playerController.PlayerInputDisabled = true;
 
@@ -62,7 +64,6 @@ public class PlayerDashController : MonoBehaviour
             playerController.RotationDisabled = false;
             playerController.PlayerInputDisabled = false;
         }
-        Debug.Log("Finished dash");
 
         isDashing = false;
         handlingDash = null;
@@ -74,5 +75,6 @@ public class PlayerDashController : MonoBehaviour
         isDashing = false;
         handlingDash = null;
         body.linearVelocity = Vector2.zero;
+        dashEnabled = enableDashByDefault;
     }
 }
