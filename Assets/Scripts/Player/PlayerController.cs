@@ -1,11 +1,15 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(Rigidbody2D))]
 public class PlayerController : MonoBehaviour
 {
     [Range(0f, 30f)]
-    [SerializeField] private float moveSpeed = 1;
+    [SerializeField] private float moveSpeed = 5;
+
+    [Range(0f, 10f)]
+    [SerializeField] private float fastMoveSpeedMultiplier = 1.5f;
 
     [Range(-360f, 360f)]
     [SerializeField] private float rotationSpeed  = 35;
@@ -70,14 +74,16 @@ public class PlayerController : MonoBehaviour
 
         if (canMoveWithInput)
         {
+            float speed = Keyboard.current.zKey.isPressed ? MoveSpeed * fastMoveSpeedMultiplier : MoveSpeed;
+
             if (Mathf.Abs(xInput) > 0.001)
             {
-                body.linearVelocity = new Vector2(xInput * MoveSpeed, body.linearVelocity.y);
+                body.linearVelocity = new Vector2(xInput * speed, body.linearVelocity.y);
             }
 
             if (Mathf.Abs(yInput) > 0.001)
             {
-                body.linearVelocity = new Vector2(body.linearVelocity.x, yInput * MoveSpeed);
+                body.linearVelocity = new Vector2(body.linearVelocity.x, yInput * speed);
             }
         }
     }
