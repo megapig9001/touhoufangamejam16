@@ -18,7 +18,8 @@ MonoBehaviour:
   - 
   Sounds:
   - {fileID: 11400000, guid: b9b5e94413d87f348824d30b6b31d36e, type: 2}
-  Music: []
+  Music:
+  - {fileID: 11400000, guid: 6d6b253e91dd91d4d801b976b3d3d25a, type: 2}
   useCustomNames: 0
   generatedName: AudioLibrary
   musicEnum: AudioLibraryMusic
@@ -36,5 +37,6 @@ MonoBehaviour:
     foldout: 1
   musicCategoriesToList:
   - name: 
-    files: []
+    files:
+    - {fileID: 11400000, guid: 6d6b253e91dd91d4d801b976b3d3d25a, type: 2}
     foldout: 1
