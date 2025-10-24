@@ -233,6 +233,7 @@ GameObject:
   - component: {fileID: 7815826129915232942}
   - component: {fileID: 3629851311627326887}
   - component: {fileID: 3508113455890310528}
+  - component: {fileID: 172217341209656033}
   m_Layer: 0
   m_Name: TestPlayer
   m_TagString: Player
@@ -319,6 +320,21 @@ MonoBehaviour:
   baseHealth: 3
   playerInvulnerabilitySeconds: 2
   playerSpriteRenderer: {fileID: 3976520487257845833}
+--- !u!114 &172217341209656033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6757346364252871479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31f5a13bc34a1b648a8378e1e8488f3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dashSpeed: 12
+  canDash: 1
+  playerHead: {fileID: 8775209809988069126}
 --- !u!1 &8775209809988069126
 GameObject:
   m_ObjectHideFlags: 0

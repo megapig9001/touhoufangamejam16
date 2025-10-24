@@ -4,6 +4,7 @@ using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(PlayerHealth))]
+[RequireComponent(typeof(PlayerDashController))]
 public class PlayerController : MonoBehaviour
 {
     [Range(0f, 30f)]
@@ -35,6 +36,8 @@ public class PlayerController : MonoBehaviour
     public float CurrentMoveSpeed { get => moveSpeed; set => moveSpeed = value; }
 
     public float CurrentRotationAngle { get => body.rotation; set => body.rotation = value; }
+
+    public bool InHitstun { get; private set; }
 
     private void Awake()
     {
@@ -97,9 +100,15 @@ public class PlayerController : MonoBehaviour
         flipRotation = false;
         moveSpeed = StartingSpeed;
         rotationSpeed = StartingRotationSpeed;
+        body.linearVelocity = Vector2.zero;
+        body.angularVelocity = 0;
+        InHitstun = false;
 
         PlayerHealth healthController = GetComponent<PlayerHealth>();
         healthController.ResetPlayer();
+
+        PlayerDashController dashController = GetComponent<PlayerDashController>();
+        dashController.ResetPlayer();
     }
 
     private void HandleMovement()
@@ -133,18 +142,35 @@ public class PlayerController : MonoBehaviour
 
     private IEnumerator HandleHitstun(Collision2D collision)
     {
-        PlayerInputDisabled = true;
-        RotationDisabled = true;
+        //Hitstun has already been triggered in the past knockbackTime-seconds. Just reapply the velocities and nothing else.
+        if (!InHitstun)
+        {
+            body.linearVelocity = Vector2.zero;
+            body.angularVelocity = 0;
+            InHitstun = true;
+            PlayerInputDisabled = true;
+            RotationDisabled = true;
 
-        body.linearVelocity = new Vector2(body.position.x - collision.GetContact(0).point.x, body.position.y - collision.GetContact(0).point.y).normalized
-            * knockbackForce;
-        
-        body.angularVelocity = -1 * Mathf.Sign(rotationSpeed) * knockbackRotationForce;
+            body.linearVelocity = new Vector2(body.position.x - collision.GetContact(0).point.x, body.position.y - collision.GetContact(0).point.y).normalized
+                * knockbackForce;
 
-        yield return new WaitForSeconds(knockbackTime);
+            body.angularVelocity = -1 * Mathf.Sign(rotationSpeed) * knockbackRotationForce;
 
-        body.linearVelocity = Vector2.zero;
-        PlayerInputDisabled = false;
-        RotationDisabled = false;
+            yield return new WaitForSeconds(knockbackTime);
+
+            body.linearVelocity = Vector2.zero;
+            body.angularVelocity = 0;
+            PlayerInputDisabled = false;
+            RotationDisabled = false;
+            InHitstun = false;
+        }
+        else
+        {
+            body.linearVelocity = new Vector2(body.position.x - collision.GetContact(0).point.x, body.position.y - collision.GetContact(0).point.y).normalized
+                * knockbackForce;
+
+            body.angularVelocity = -1 * Mathf.Sign(rotationSpeed) * knockbackRotationForce;
+            yield return null;
+        }
     }
 }
