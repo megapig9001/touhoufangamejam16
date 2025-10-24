@@ -62,7 +62,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void ReverseRotation()
+    public void ReverseRotation()
     {
         rotationSpeed *= -1;
     }
