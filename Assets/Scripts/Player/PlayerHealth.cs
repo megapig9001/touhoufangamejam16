@@ -7,25 +7,29 @@ public class PlayerHealth : MonoBehaviour
 
     [SerializeField] [Range(1, 10)]
     private int baseHealth = 3;
+    public int BaseHealth { get => baseHealth; }
 
-    public int CurrentHealth { get; set; }
+
+    private int CurrentHealth { get; set; }
 
     [SerializeField] [Range(0, 10f)]
     private float playerInvulnerabilitySeconds = 2;
 
     private Coroutine handlingOnHitInvulnerability;
 
+    public bool CanTakeDamage { get; set; }
+
     [SerializeField]
     private SpriteRenderer playerSpriteRenderer;
 
     private void Awake()
     {
-        CurrentHealth = baseHealth;
+        CurrentHealth = BaseHealth;
     }
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-        if (handlingOnHitInvulnerability != null)
+        if (!CanTakeDamage || handlingOnHitInvulnerability != null)
             return;
 
         TakeDamage(1);
@@ -59,6 +63,13 @@ public class PlayerHealth : MonoBehaviour
         {
             CurrentHealth = 0;
         }
+        Debug.Log($"CurrentHealth = {CurrentHealth}");
+    }
+
+    public void SetHealth(int value)
+    {
+        CurrentHealth = value > BaseHealth ? BaseHealth : value;
+        Debug.Log($"CurrentHealth = {CurrentHealth}");
     }
 
     ///Temp code for early testing
@@ -79,6 +90,11 @@ public class PlayerHealth : MonoBehaviour
         controller.RotationDisabled = false;
 
         transform.position = RespawnPosition;
-        CurrentHealth = baseHealth;
+        CurrentHealth = BaseHealth;
+    }
+
+    public void SetPlayerSpriteColor(Color color)
+    {
+        playerSpriteRenderer.color = color;
     }
 }

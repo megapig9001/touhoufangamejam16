@@ -101,6 +101,8 @@ public class PlayerController : MonoBehaviour
         PlayerInputDisabled = true;
         RotationDisabled = true;
 
+        JSAM.AudioManager.PlaySound(AudioLibrarySounds.Hit);
+
         body.linearVelocity = new Vector2(body.position.x - collision.GetContact(0).point.x, body.position.y - collision.GetContact(0).point.y).normalized
             * knockbackForce;
         
