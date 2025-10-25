@@ -27,7 +27,7 @@ public class LevelManager : MonoBehaviour
     private void Awake()
     {
         RespawnPosition = player.transform.position;
-        //player.gameObject.SetActive(false);
+        player.gameObject.SetActive(false);
     }
 
     void Start()

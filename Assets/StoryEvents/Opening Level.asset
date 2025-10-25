@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27aca8f6da03658478ee1dc44eab7429, type: 3}
+  m_Name: Opening Level
+  m_EditorClassIdentifier: 
+  <storyEventSteps>k__BackingField:
+  - stepName: Step 1
+    <eventImage>k__BackingField: {fileID: 0}
+    <eventText>k__BackingField: (Press Z to advance text)
+    <playTransitionToNextStep>k__BackingField: 0
+  - stepName: Step 2
+    <eventImage>k__BackingField: {fileID: 0}
+    <eventText>k__BackingField: 'Chiyo: Rusty, we need to get some more fabric to
+      make Halloween costumes! Can you go look for some? '
+    <playTransitionToNextStep>k__BackingField: 0
+  - stepName: Step 3
+    <eventImage>k__BackingField: {fileID: 0}
+    <eventText>k__BackingField: 'Chiyo: Rusty, we need to get some more fabric to
+      make Halloween costumes! Can you go look for some? '
+    <playTransitionToNextStep>k__BackingField: 0
+  - stepName: Step 4
+    <eventImage>k__BackingField: {fileID: 0}
+    <eventText>k__BackingField: 'Chiyo: Turbo Mode? '
+    <playTransitionToNextStep>k__BackingField: 0
+  - stepName: Step 5
+    <eventImage>k__BackingField: {fileID: 0}
+    <eventText>k__BackingField: 'Rusty: Yep! Time to SPIN! '
+    <playTransitionToNextStep>k__BackingField: 0
+  - stepName: Step 6
+    <eventImage>k__BackingField: {fileID: 0}
+    <eventText>k__BackingField: "Chiyo: Just make sure your head makes it to the
+      end\u2026 "
+    <playTransitionToNextStep>k__BackingField: 0
