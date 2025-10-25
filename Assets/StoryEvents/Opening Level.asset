@@ -14,29 +14,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <storyEventSteps>k__BackingField:
   - stepName: Step 1
-    <eventImage>k__BackingField: {fileID: 0}
+    <eventImage>k__BackingField: {fileID: 21300000, guid: 40f2e846b4a5723459d177c2628ddb94, type: 3}
     <eventText>k__BackingField: (Press Z to advance text)
     <playTransitionToNextStep>k__BackingField: 0
   - stepName: Step 2
-    <eventImage>k__BackingField: {fileID: 0}
+    <eventImage>k__BackingField: {fileID: 21300000, guid: 40f2e846b4a5723459d177c2628ddb94, type: 3}
     <eventText>k__BackingField: 'Chiyo: Rusty, we need to get some more fabric to
       make Halloween costumes! Can you go look for some? '
     <playTransitionToNextStep>k__BackingField: 0
   - stepName: Step 3
-    <eventImage>k__BackingField: {fileID: 0}
+    <eventImage>k__BackingField: {fileID: 21300000, guid: 5cd1a71cf76a6c547b92796a97ccc6b9, type: 3}
     <eventText>k__BackingField: 'Rusty: Sure thing! That means I get to use Turbo
       Mode!'
     <playTransitionToNextStep>k__BackingField: 0
   - stepName: Step 4
-    <eventImage>k__BackingField: {fileID: 0}
+    <eventImage>k__BackingField: {fileID: 21300000, guid: 5cd1a71cf76a6c547b92796a97ccc6b9, type: 3}
     <eventText>k__BackingField: 'Chiyo: Turbo Mode? '
     <playTransitionToNextStep>k__BackingField: 0
   - stepName: Step 5
-    <eventImage>k__BackingField: {fileID: 0}
+    <eventImage>k__BackingField: {fileID: 21300000, guid: 5cd1a71cf76a6c547b92796a97ccc6b9, type: 3}
     <eventText>k__BackingField: 'Rusty: Yep! Time to SPIN! '
     <playTransitionToNextStep>k__BackingField: 0
   - stepName: Step 6
-    <eventImage>k__BackingField: {fileID: 0}
+    <eventImage>k__BackingField: {fileID: 21300000, guid: 5cd1a71cf76a6c547b92796a97ccc6b9, type: 3}
     <eventText>k__BackingField: "Chiyo: Just make sure your head makes it to the
       end\u2026 "
     <playTransitionToNextStep>k__BackingField: 0

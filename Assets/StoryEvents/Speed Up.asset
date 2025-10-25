@@ -14,14 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <storyEventSteps>k__BackingField:
   - stepName: Step 1
-    <eventImage>k__BackingField: {fileID: 0}
+    <eventImage>k__BackingField: {fileID: 21300000, guid: 40f2e846b4a5723459d177c2628ddb94, type: 3}
     <eventText>k__BackingField: 'Chiyo: Wouldn''t it be easier to slither like you
       usually do? '
+    <playTransitionToNextStep>k__BackingField: 0
   - stepName: Step 2
-    <eventImage>k__BackingField: {fileID: 0}
+    <eventImage>k__BackingField: {fileID: 21300000, guid: d8710a727f0dac744a4e3a4e7e17687a, type: 3}
     <eventText>k__BackingField: 'Rusty: What? You''re questioning me? No. Turbo Mode
       is the best idea anyone''s ever had!'
+    <playTransitionToNextStep>k__BackingField: 0
   - stepName: Step 3
-    <eventImage>k__BackingField: {fileID: 0}
+    <eventImage>k__BackingField: {fileID: 21300000, guid: 5cd1a71cf76a6c547b92796a97ccc6b9, type: 3}
     <eventText>k__BackingField: 'Rusty: In fact, I can go even faster if I hold down
       the Z key!'
+    <playTransitionToNextStep>k__BackingField: 0
