@@ -76,18 +76,16 @@ public class LevelManager : MonoBehaviour
         levelSong.SetActive(true);
         player.gameObject.SetActive(true);
         new LevelStartEvent().InvokeEvent();
-
     }
 
     private IEnumerator HandleLevelOpening()
     {
         yield return GameManager.instance.TransitionExpandAndCollapseIn();
 
-        if (storyEventToPlayOnStart != null)
+        if (storyEventToPlayOnStart != null && !GameManager.instance.EnteredCurrentLevelFromLevelSelectMenu)
         {
             dialogueSong.SetActive(true);
             yield return GameManager.instance.GoThroughStoryEvent(storyEventToPlayOnStart);
-
         }
 
         StartLevel();

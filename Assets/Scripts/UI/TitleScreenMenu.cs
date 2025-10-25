@@ -7,16 +7,22 @@ public class TitleScreenMenu : MonoBehaviour
     [SerializeField] CanvasGroup mainMenuCanvasGroup;
     [SerializeField] CanvasGroup levelSelectMenuCanvasGroup;
 
+    private Coroutine loadingScene;
+
     private void Start()
     {
         mainMenuCanvasGroup.gameObject.SetActive(true);
         levelSelectMenuCanvasGroup.gameObject.SetActive(false);
-        StartCoroutine(GameManager.instance.TransitionFadeOut(3));
+        StartCoroutine(GameManager.instance.TransitionFadeOut(0.2f));
     }
 
     public void OnClickStart(string firstStageScene)
     {
-        StartCoroutine(LoadScene(firstStageScene));
+        if (loadingScene == null)
+        {
+            GameManager.instance.EnteredCurrentLevelFromLevelSelectMenu = false;
+            loadingScene = StartCoroutine(LoadScene(firstStageScene));
+        }
     }
 
     public void OnClickLevelSelect()
@@ -37,7 +43,11 @@ public class TitleScreenMenu : MonoBehaviour
 
     public void OnClickLevelSelectMenu_LoadLevel(string sceneToLoad)
     {
-        StartCoroutine(LoadScene(sceneToLoad));
+        if (loadingScene == null)
+        {
+            GameManager.instance.EnteredCurrentLevelFromLevelSelectMenu = true;
+            loadingScene = StartCoroutine(LoadScene(sceneToLoad));
+        }
     }
 
     public void OnClickLevelSelectMenu_Back()
@@ -53,7 +63,9 @@ public class TitleScreenMenu : MonoBehaviour
 
     private IEnumerator LoadScene(string sceneName)
     {
+        yield return new WaitForSeconds(0.2f);
         yield return GameManager.instance.TransitionExpandAndCollapseIn();
+
         yield return new WaitForEndOfFrame();
 
         yield return UnityEngine.SceneManagement.SceneManager.LoadSceneAsync(sceneName);
