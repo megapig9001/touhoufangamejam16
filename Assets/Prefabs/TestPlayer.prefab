@@ -318,7 +318,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseHealth: 3
-  playerInvulnerabilitySeconds: 2
+  playerInvulnerabilitySeconds: 0.5
   playerSpriteRenderer: {fileID: 3976520487257845833}
 --- !u!114 &172217341209656033
 MonoBehaviour:

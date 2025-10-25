@@ -14,32 +14,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <storyEventSteps>k__BackingField:
   - stepName: Step 1
-    <eventImage>k__BackingField: {fileID: 0}
+    <eventImage>k__BackingField: {fileID: 21300000, guid: 40f2e846b4a5723459d177c2628ddb94, type: 3}
     <eventText>k__BackingField: "Chiyo: Those gaps seem to be getting tighter\u2026 "
     <playTransitionToNextStep>k__BackingField: 0
   - stepName: Step 2
-    <eventImage>k__BackingField: {fileID: 0}
+    <eventImage>k__BackingField: {fileID: 21300000, guid: 5cd1a71cf76a6c547b92796a97ccc6b9, type: 3}
     <eventText>k__BackingField: 'Rusty: Well, I can use my "Super Rusty Dash" by
       holding down X once I eat an apple.'
     <playTransitionToNextStep>k__BackingField: 0
   - stepName: Step 3
-    <eventImage>k__BackingField: {fileID: 0}
+    <eventImage>k__BackingField: {fileID: 21300000, guid: 5cd1a71cf76a6c547b92796a97ccc6b9, type: 3}
     <eventText>k__BackingField: 'Rusty: WEEEEEE!!!! '
     <playTransitionToNextStep>k__BackingField: 0
   - stepName: Step 4
-    <eventImage>k__BackingField: {fileID: 0}
+    <eventImage>k__BackingField: {fileID: -4439659151877778680, guid: b88e5324344597142b5ba693df5f6108, type: 3}
     <eventText>k__BackingField: CRASH!
     <playTransitionToNextStep>k__BackingField: 0
   - stepName: Step 5
-    <eventImage>k__BackingField: {fileID: 0}
+    <eventImage>k__BackingField: {fileID: -4439659151877778680, guid: b88e5324344597142b5ba693df5f6108, type: 3}
     <eventText>k__BackingField: "Chiyo: Watch out for walls\u2026 It seems like you
       can't change direction while you do it\u2026 "
     <playTransitionToNextStep>k__BackingField: 0
   - stepName: Step 6
-    <eventImage>k__BackingField: {fileID: 0}
+    <eventImage>k__BackingField: {fileID: -7243304005397063617, guid: ba21f631f82283040a7259993df1677c, type: 3}
     <eventText>k__BackingField: "Chiyo: I don't know if you'll need to use this\u2026 "
     <playTransitionToNextStep>k__BackingField: 0
   - stepName: Step 7
-    <eventImage>k__BackingField: {fileID: 0}
+    <eventImage>k__BackingField: {fileID: -7243304005397063617, guid: ba21f631f82283040a7259993df1677c, type: 3}
     <eventText>k__BackingField: 'Chiyo: But maybe if you want to really go fast! '
     <playTransitionToNextStep>k__BackingField: 0
