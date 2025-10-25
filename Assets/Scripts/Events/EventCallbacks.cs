@@ -78,6 +78,11 @@ namespace EventManager
 
     }
 
+    public class PlayerReachGoalEvent : Event<PlayerReachGoalEvent>
+    {
+
+    }
+
     public class BeginCutsceneEvent : Event<BeginCutsceneEvent>
     {
 

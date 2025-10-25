@@ -1,6 +1,8 @@
 using EventManager;
 using System;
 using System.Collections;
+using UnityEditor;
+using UnityEditor.SearchService;
 using UnityEngine;
 
 /// <summary>
@@ -12,9 +14,13 @@ public class LevelManager : MonoBehaviour
     [Tooltip("The StoryEvent object that will be used to play an opening when this LevelManager starts up. If one isn't provided, the level just start immediately.")]
     [SerializeField] StoryEvent storyEventToPlayOnStart;
 
+    [SerializeField] SceneAsset nextLevel;
+
     [SerializeField] PlayerController player;
 
     private Coroutine handlingLevelOpening = null;
+
+    private Coroutine handlingLevelClosing = null;
 
     public Vector2 RespawnPosition { get; set; }
 
@@ -24,15 +30,23 @@ public class LevelManager : MonoBehaviour
         //player.gameObject.SetActive(false);
     }
 
+    void Start()
+    {
+        handlingLevelOpening = StartCoroutine(HandleLevelOpening());
+    }
+
+
     private void OnEnable()
     {
         PlayerDeathEvent.AddListener(HandlePlayerDeathEvent);
+        PlayerReachGoalEvent.AddListener(HandlePlayerReachGoalEvent);
+
     }
 
     private void OnDisable()
     {
         PlayerDeathEvent.RemoveListener(HandlePlayerDeathEvent);
-
+        PlayerReachGoalEvent.RemoveListener(HandlePlayerReachGoalEvent);
     }
 
     private void HandlePlayerDeathEvent(PlayerDeathEvent info)
@@ -42,10 +56,9 @@ public class LevelManager : MonoBehaviour
         player.transform.position = RespawnPosition;
     }
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private void HandlePlayerReachGoalEvent(PlayerReachGoalEvent info)
     {
-        handlingLevelOpening = StartCoroutine(HandleLevelOpening());
+        StartCoroutine(HandleLevelEnding());
     }
 
     private void StartLevel()
@@ -69,8 +82,12 @@ public class LevelManager : MonoBehaviour
         handlingLevelOpening = null;
     }
 
-    //private IEnumerator HandlePlayerDeath()
-    //{
+    private IEnumerator HandleLevelEnding()
+    {
+        yield return GameManager.instance.TransitionExpandAndCollapseIn();
 
-    //}
+        yield return UnityEngine.SceneManagement.SceneManager.LoadSceneAsync(nextLevel.name);
+
+        handlingLevelClosing = null;
+    }
 }

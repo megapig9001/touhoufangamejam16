@@ -4,6 +4,7 @@ using UnityEngine.UI;
 using DG.Tweening;
 using System;
 using TMPro;
+using UnityEngine.InputSystem;
 
 public class GameManager : MonoBehaviour
 {
@@ -51,8 +52,7 @@ public class GameManager : MonoBehaviour
 
             yield return TransitionExpandAndCollapseOut(transitionLength);
 
-            //TODO: Move on via user input before going to next step
-            yield return new WaitForSeconds(2);
+            yield return new WaitUntil(() => Keyboard.current.zKey.wasPressedThisFrame);
 
             if(step.playTransitionToNextStep)
                 yield return TransitionExpandAndCollapseIn(transitionLength);
@@ -63,6 +63,11 @@ public class GameManager : MonoBehaviour
 
         storyCanvasGroup.alpha = 0;
         storyCanvasGroup.gameObject.SetActive(false);
+    }
+
+    public void CancelCurrentStoryEvent()
+    {
+        hasTransitionedIn = false;
     }
 
     private void DisplayStoryEvent(StoryEventStep step)
