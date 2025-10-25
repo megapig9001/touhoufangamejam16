@@ -22,6 +22,11 @@ MonoBehaviour:
     <eventText>k__BackingField: 'Rusty: Well, I can use my "Super Rusty Dash" by
       holding down X once I eat an apple.'
     <playTransitionToNextStep>k__BackingField: 0
+  - stepName: Step 2.5
+    <eventImage>k__BackingField: {fileID: 21300000, guid: 5cd1a71cf76a6c547b92796a97ccc6b9, type: 3}
+    <eventText>k__BackingField: 'Rusty: I''ll charge the way my head is facing, and
+      I can do it at almost any time!'
+    <playTransitionToNextStep>k__BackingField: 0
   - stepName: Step 3
     <eventImage>k__BackingField: {fileID: 21300000, guid: 5cd1a71cf76a6c547b92796a97ccc6b9, type: 3}
     <eventText>k__BackingField: 'Rusty: WEEEEEE!!!! '

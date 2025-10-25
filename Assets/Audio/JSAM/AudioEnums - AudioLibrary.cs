@@ -1,7 +1,8 @@
     public enum AudioLibrarySounds {
         Hit,
         GetItem,
-        Dash
+        Dash,
+        Heal
     }
     public enum AudioLibraryMusic {
         Sekibanki,
