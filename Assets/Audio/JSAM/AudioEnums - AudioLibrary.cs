@@ -2,5 +2,7 @@
         Hit
     }
     public enum AudioLibraryMusic {
-        Sekibanki
+        Sekibanki,
+        Title,
+        Talk
     }

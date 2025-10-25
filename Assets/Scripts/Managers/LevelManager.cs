@@ -22,6 +22,10 @@ public class LevelManager : MonoBehaviour
 
     public Vector2 RespawnPosition { get; set; }
 
+    public GameObject dialogueSong;
+
+    public GameObject levelSong;
+
     private void Awake()
     {
         RespawnPosition = player.transform.position;
@@ -61,6 +65,8 @@ public class LevelManager : MonoBehaviour
 
     private void StartLevel()
     {
+        dialogueSong.SetActive(false);
+        levelSong.SetActive(true);
         player.gameObject.SetActive(true);
         new EventManager.LevelStartEvent().InvokeEvent();
 
@@ -70,8 +76,12 @@ public class LevelManager : MonoBehaviour
     {
         yield return GameManager.instance.TransitionExpandAndCollapseIn();
 
-        if(storyEventToPlayOnStart != null) 
+        if (storyEventToPlayOnStart != null)
+        {
+            dialogueSong.SetActive(true);
             yield return GameManager.instance.GoThroughStoryEvent(storyEventToPlayOnStart);
+
+        }
 
         StartLevel();
 

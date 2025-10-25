@@ -15,11 +15,13 @@ MonoBehaviour:
   soundCategories:
   - 
   musicCategories:
-  - 
+  - Music
   Sounds:
   - {fileID: 11400000, guid: b9b5e94413d87f348824d30b6b31d36e, type: 2}
   Music:
   - {fileID: 11400000, guid: 6d6b253e91dd91d4d801b976b3d3d25a, type: 2}
+  - {fileID: 11400000, guid: e690504fc65aff14bbcfc5e908ef5a54, type: 2}
+  - {fileID: 11400000, guid: f9bd6ce7980e13d428452463ebc336fb, type: 2}
   useCustomNames: 0
   generatedName: AudioLibrary
   musicEnum: AudioLibraryMusic
@@ -36,7 +38,9 @@ MonoBehaviour:
     - {fileID: 11400000, guid: b9b5e94413d87f348824d30b6b31d36e, type: 2}
     foldout: 1
   musicCategoriesToList:
-  - name: 
+  - name: Music
     files:
     - {fileID: 11400000, guid: 6d6b253e91dd91d4d801b976b3d3d25a, type: 2}
+    - {fileID: 11400000, guid: e690504fc65aff14bbcfc5e908ef5a54, type: 2}
+    - {fileID: 11400000, guid: f9bd6ce7980e13d428452463ebc336fb, type: 2}
     foldout: 1

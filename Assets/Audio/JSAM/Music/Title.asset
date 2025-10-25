@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bfb8002b44af6934a9ae327c8311d458, type: 3}
-  m_Name: Sekibanki
+  m_Name: Title
   m_EditorClassIdentifier: 
   safeName: 
   presetDescription: 
   files:
-  - {fileID: 8300000, guid: 3902116579f7e934c82ff453a31d5198, type: 3}
+  - {fileID: 8300000, guid: 1245ae0f1b954764fb5df0d106205c38, type: 3}
   neverRepeat: 0
   loopStart: 0
-  loopEnd: 33.80245
+  loopEnd: 87.19673
   bpm: 120
   relativeVolume: 1
   spatialize: 0
