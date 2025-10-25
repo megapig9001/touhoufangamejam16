@@ -14,14 +14,14 @@ public class HUD : MonoBehaviour
     private void OnEnable()
     {
         EventManager.LevelStartEvent.AddListener(HandleLevelStartEvent);
-        EventManager.PlayerDeathEvent.AddListener(HandlePlayerDeathEvent);
+        EventManager.LevelRestartEvent.AddListener(HandleLevelRestartEvent);
         EventManager.PlayerHealthChangeEvent.AddListener(HandlePlayerHealthChangeEvent);
     }
 
     private void OnDisable()
     {
         EventManager.LevelStartEvent.RemoveListener(HandleLevelStartEvent);
-        EventManager.PlayerDeathEvent.RemoveListener(HandlePlayerDeathEvent);
+        EventManager.LevelRestartEvent.RemoveListener(HandleLevelRestartEvent);
         EventManager.PlayerHealthChangeEvent.RemoveListener(HandlePlayerHealthChangeEvent);
     }
 
@@ -35,7 +35,7 @@ public class HUD : MonoBehaviour
         playerHealthText.text = info.newCurrentHealth.ToString();
     }
 
-    private void HandlePlayerDeathEvent(EventManager.PlayerDeathEvent info)
+    private void HandleLevelRestartEvent(EventManager.LevelRestartEvent info)
     {
         timer.StopAndResetTimer();
         timer.StartTimer();

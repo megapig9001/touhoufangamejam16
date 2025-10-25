@@ -25,15 +25,15 @@ public class DashEnableItem : MonoBehaviour
 
     private void OnEnable()
     {
-        PlayerDeathEvent.AddListener(HandlePlayerDeathEvent);
+        LevelRestartEvent.AddListener(HandleLevelRestartEvent);
     }
 
     private void OnDisable()
     {
-        PlayerDeathEvent.RemoveListener(HandlePlayerDeathEvent);
+        LevelRestartEvent.RemoveListener(HandleLevelRestartEvent);
     }
 
-    private void HandlePlayerDeathEvent(PlayerDeathEvent info)
+    private void HandleLevelRestartEvent(LevelRestartEvent info)
     {
         spriteRenderer.enabled = true;
         collider2d.enabled = true;

@@ -22,7 +22,7 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField]
     private SpriteRenderer playerSpriteRenderer;
 
-    private void Awake()
+    private void Start()
     {
         SetHealth(baseHealth);
     }

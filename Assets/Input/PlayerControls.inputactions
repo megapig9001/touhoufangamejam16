@@ -34,15 +34,6 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Point",
-                    "type": "PassThrough",
-                    "id": "00ab637e-51ae-4ba5-939c-c12e137fcc3a",
-                    "expectedControlType": "Vector2",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": true
-                },
-                {
                     "name": "TrackedDevicePosition",
                     "type": "PassThrough",
                     "id": "cc3d86cd-b17e-4098-8683-c18757d5b125",
@@ -356,17 +347,6 @@
                     "processors": "",
                     "groups": "Keyboard&Mouse;Gamepad;Touch;Joystick;XR",
                     "action": "Cancel",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "5f37756b-339d-4f46-bff7-4138982bc10f",
-                    "path": "<Touchscreen>/touch*/position",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Touch",
-                    "action": "Point",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },

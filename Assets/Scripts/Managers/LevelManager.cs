@@ -20,6 +20,8 @@ public class LevelManager : MonoBehaviour
 
     private Coroutine handlingLevelEnding = null;
 
+    private Coroutine handlingLevelRestart = null;
+
     public Vector2 RespawnPosition { get; set; }
 
     public GameObject dialogueSong;
@@ -53,13 +55,18 @@ public class LevelManager : MonoBehaviour
 
     private void HandlePlayerDeathEvent(PlayerDeathEvent info)
     {
-        player.ResetPlayer();
+        //Fail safe in case a transition is already occurring
+        if (handlingLevelOpening != null || handlingLevelEnding != null || handlingLevelRestart != null)
+            return;
 
-        player.transform.position = RespawnPosition;
+        handlingLevelRestart = StartCoroutine(HandleLevelRestart());
     }
 
     private void HandlePlayerReachGoalEvent(PlayerReachGoalEvent info)
     {
+        //Fail safe in case a transition is already occurring
+        if (handlingLevelOpening != null || handlingLevelEnding != null || handlingLevelRestart != null)
+            return;
         handlingLevelEnding = StartCoroutine(HandleLevelEnding());
     }
 
@@ -68,7 +75,7 @@ public class LevelManager : MonoBehaviour
         dialogueSong.SetActive(false);
         levelSong.SetActive(true);
         player.gameObject.SetActive(true);
-        new EventManager.LevelStartEvent().InvokeEvent();
+        new LevelStartEvent().InvokeEvent();
 
     }
 
@@ -97,5 +104,24 @@ public class LevelManager : MonoBehaviour
         yield return UnityEngine.SceneManagement.SceneManager.LoadSceneAsync(nextLevel);
 
         handlingLevelEnding = null;
+    }
+
+    private IEnumerator HandleLevelRestart()
+    {
+        player.ResetPlayer();
+        player.gameObject.SetActive(false);
+
+        yield return new WaitForSeconds(0.2f);
+        yield return GameManager.instance.TransitionExpandAndCollapseIn();
+
+        player.gameObject.SetActive(true);
+        player.transform.position = RespawnPosition;
+
+        yield return new WaitForSeconds(0.5f);
+        yield return GameManager.instance.TransitionExpandAndCollapseOut();
+
+        new LevelRestartEvent().InvokeEvent();
+
+        handlingLevelRestart = null;
     }
 }

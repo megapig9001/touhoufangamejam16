@@ -83,12 +83,7 @@ namespace EventManager
 
     }
 
-    public class BeginCutsceneEvent : Event<BeginCutsceneEvent>
-    {
-
-    }
-
-    public class EndCutsceneEvent : Event<EndCutsceneEvent>
+    public class LevelRestartEvent : Event<LevelRestartEvent>
     {
 
     }
