@@ -20,7 +20,9 @@ public class PlayerHealth : MonoBehaviour
     public bool CanTakeDamage { get; set; } = true;
 
     [SerializeField]
-    private SpriteRenderer playerSpriteRenderer;
+    private SpriteRenderer playerSpriteRenderer, hurtSpriteRenderer;
+    [SerializeField]
+    private GameObject playerFine, playerHurt;
 
     private void Start()
     {
@@ -48,11 +50,14 @@ public class PlayerHealth : MonoBehaviour
     private IEnumerator HandleInvulnerability()
     {
 
-        playerSpriteRenderer.color = Color.blue;
+        playerFine.SetActive(false);
+        playerHurt.SetActive(true);
+        hurtSpriteRenderer.color = Color.blue;
 
         yield return new WaitForSeconds(playerInvulnerabilitySeconds);
+        playerHurt.SetActive(false);
+        playerFine.SetActive(true);
 
-        playerSpriteRenderer.color = Color.white;
         handlingOnHitInvulnerability = null;
     }
 
