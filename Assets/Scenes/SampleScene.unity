@@ -1291,6 +1291,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1010560045}
+    - target: {fileID: 7131816887081736531, guid: f8ddc11815e3d5c4baabf7875a12edfe, type: 3}
+      propertyPath: storyEventToPlayOnStart
+      value: 
+      objectReference: {fileID: 11400000, guid: cbe2686a447172e48abe2982b4912e27, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1304,6 +1308,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 787312277798683854, guid: 97f6a13a5cbe9364cb7d381cfa6b2968, type: 3}
+      propertyPath: m_VertexColorAlwaysGammaSpace
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 787312277798683854, guid: 97f6a13a5cbe9364cb7d381cfa6b2968, type: 3}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 5132204855631360426, guid: 97f6a13a5cbe9364cb7d381cfa6b2968, type: 3}
       propertyPath: m_Name
       value: HUD
@@ -1478,6 +1490,63 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ab18a33cf0175a4e9ca2fe35038cfd2, type: 3}
+--- !u!1001 &4886230434885502666
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1105448772884937531, guid: f1241abc5e654474090b21f088d8a3f0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1105448772884937531, guid: f1241abc5e654474090b21f088d8a3f0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1105448772884937531, guid: f1241abc5e654474090b21f088d8a3f0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1105448772884937531, guid: f1241abc5e654474090b21f088d8a3f0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1105448772884937531, guid: f1241abc5e654474090b21f088d8a3f0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1105448772884937531, guid: f1241abc5e654474090b21f088d8a3f0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1105448772884937531, guid: f1241abc5e654474090b21f088d8a3f0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1105448772884937531, guid: f1241abc5e654474090b21f088d8a3f0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1105448772884937531, guid: f1241abc5e654474090b21f088d8a3f0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1105448772884937531, guid: f1241abc5e654474090b21f088d8a3f0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3572032912702665568, guid: f1241abc5e654474090b21f088d8a3f0, type: 3}
+      propertyPath: m_Name
+      value: GameManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f1241abc5e654474090b21f088d8a3f0, type: 3}
 --- !u!1001 &7847902049158237258
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1674,6 +1743,7 @@ SceneRoots:
   - {fileID: 1487348012}
   - {fileID: 1313699735}
   - {fileID: 1436385954}
-  - {fileID: 2100816105043256686}
   - {fileID: 1907536363620755919}
   - {fileID: 8070490980382788975}
+  - {fileID: 2100816105043256686}
+  - {fileID: 4886230434885502666}

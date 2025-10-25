@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27aca8f6da03658478ee1dc44eab7429, type: 3}
+  m_Name: TestStoryEvent
+  m_EditorClassIdentifier: 
+  <storyEventSteps>k__BackingField:
+  - stepName: Test Step 1
+    <eventImage>k__BackingField: {fileID: -8257282605148329291, guid: bf7856f18dc17e5499fe001875bb4ea8, type: 3}
+    <eventText>k__BackingField: This is a test of the story events. This is insane.
+  - stepName: Test Step 2
+    <eventImage>k__BackingField: {fileID: 7532244481274023513, guid: 8dfb9b3aca64ab54b88bfa8b16fe63bf, type: 3}
+    <eventText>k__BackingField: Rusty's Real Deal Spin.
