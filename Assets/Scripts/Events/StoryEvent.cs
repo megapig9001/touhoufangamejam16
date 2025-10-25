@@ -16,4 +16,7 @@ public struct StoryEventStep
     [SerializeField] private string stepName;
     [field: SerializeField] public Sprite eventImage { get; private set; }
     [field: SerializeField] [TextArea] public string eventText { get; private set; }
+
+    [field: SerializeField] public bool playTransitionToNextStep { get; private set; }
+
 }

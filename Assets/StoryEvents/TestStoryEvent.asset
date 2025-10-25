@@ -16,6 +16,16 @@ MonoBehaviour:
   - stepName: Test Step 1
     <eventImage>k__BackingField: {fileID: -8257282605148329291, guid: bf7856f18dc17e5499fe001875bb4ea8, type: 3}
     <eventText>k__BackingField: This is a test of the story events. This is insane.
+    <playTransitionToNextStep>k__BackingField: 1
   - stepName: Test Step 2
     <eventImage>k__BackingField: {fileID: 7532244481274023513, guid: 8dfb9b3aca64ab54b88bfa8b16fe63bf, type: 3}
     <eventText>k__BackingField: Rusty's Real Deal Spin.
+    <playTransitionToNextStep>k__BackingField: 0
+  - stepName: Test Step 3
+    <eventImage>k__BackingField: {fileID: 7532244481274023513, guid: 8dfb9b3aca64ab54b88bfa8b16fe63bf, type: 3}
+    <eventText>k__BackingField: The same image with different text
+    <playTransitionToNextStep>k__BackingField: 1
+  - stepName: Test Step 2
+    <eventImage>k__BackingField: {fileID: -8257282605148329291, guid: bf7856f18dc17e5499fe001875bb4ea8, type: 3}
+    <eventText>k__BackingField: Test
+    <playTransitionToNextStep>k__BackingField: 0

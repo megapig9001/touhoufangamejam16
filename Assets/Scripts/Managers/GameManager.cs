@@ -41,10 +41,10 @@ public class GameManager : MonoBehaviour
         storyCanvasGroup.gameObject.SetActive(true);
         storyCanvasGroup.alpha = 0;
 
+        yield return TransitionExpandAndCollapseIn(transitionLength);
+
         foreach (StoryEventStep step in storyEvent.storyEventSteps)
         {
-            yield return TransitionExpandAndCollapseIn(transitionLength);
-
             //Wait briefly after completing first half of transition to make changing images less jarring.
             yield return new WaitForSeconds(0.1f);
             DisplayStoryEvent(step);
@@ -53,6 +53,9 @@ public class GameManager : MonoBehaviour
 
             //TODO: Move on via user input before going to next step
             yield return new WaitForSeconds(2);
+
+            if(step.playTransitionToNextStep)
+                yield return TransitionExpandAndCollapseIn(transitionLength);
 
         }
 
