@@ -99,7 +99,16 @@ public class LevelManager : MonoBehaviour
     {
         yield return GameManager.instance.TransitionExpandAndCollapseIn();
 
-        yield return UnityEngine.SceneManagement.SceneManager.LoadSceneAsync(nextLevel);
+        if (GameManager.instance.EnteredCurrentLevelFromLevelSelectMenu)
+        {
+            //This event is used to trigger the "level clear" menu to appear, displaying final time and Retry/Quit options
+            //Currently, should only display when a level is selected from the Level Select menu
+            new LevelCompleteEvent().InvokeEvent();
+        }
+        else
+        {
+            yield return UnityEngine.SceneManagement.SceneManager.LoadSceneAsync(nextLevel);
+        }
 
         handlingLevelEnding = null;
     }

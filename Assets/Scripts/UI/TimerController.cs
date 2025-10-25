@@ -17,6 +17,8 @@ public class TimerController : MonoBehaviour
 
     private float elapsedTime;
 
+    public string TimerText { get => timeCounter.text; }
+
 	/// <summary>
     /// Start is called before the first frame update
 	/// </summary> 

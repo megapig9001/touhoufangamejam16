@@ -82,8 +82,13 @@ namespace EventManager
     {
 
     }
-
+    
     public class LevelRestartEvent : Event<LevelRestartEvent>
+    {
+
+    }
+
+    public class LevelCompleteEvent : Event<LevelCompleteEvent>
     {
 
     }
