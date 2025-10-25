@@ -108,19 +108,24 @@ public class LevelManager : MonoBehaviour
 
     private IEnumerator HandleLevelRestart()
     {
-        player.ResetPlayer();
-        player.gameObject.SetActive(false);
+        player.transform.localScale = Vector2.zero;
+        player.SetPlayerControllersActive(false);
 
         yield return new WaitForSeconds(0.2f);
         yield return GameManager.instance.TransitionExpandAndCollapseIn();
 
-        player.gameObject.SetActive(true);
+        player.transform.localScale = Vector2.one;
         player.transform.position = RespawnPosition;
+        player.ResetPlayer();
+
+        new LevelRestartEvent().InvokeEvent();
 
         yield return new WaitForSeconds(0.5f);
         yield return GameManager.instance.TransitionExpandAndCollapseOut();
 
-        new LevelRestartEvent().InvokeEvent();
+        player.SetPlayerControllersActive(true);
+
+        new LevelStartEvent().InvokeEvent();
 
         handlingLevelRestart = null;
     }

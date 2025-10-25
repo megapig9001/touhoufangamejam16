@@ -38,6 +38,5 @@ public class HUD : MonoBehaviour
     private void HandleLevelRestartEvent(EventManager.LevelRestartEvent info)
     {
         timer.StopAndResetTimer();
-        timer.StartTimer();
     }
 }

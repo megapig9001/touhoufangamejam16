@@ -68,7 +68,6 @@ public class PauseMenu : MonoBehaviour
         LevelStartEvent.AddListener(HandleLevelStartEvent);
         PlayerDeathEvent.AddListener(HandlePlayerDeathEvent);
         PlayerReachGoalEvent.AddListener(HandlePlayerReachGoalEvent);
-        LevelRestartEvent.AddListener(HandleLevelRestartEvent);
     }
 
     private void OnDisable()
@@ -76,7 +75,6 @@ public class PauseMenu : MonoBehaviour
         LevelStartEvent.RemoveListener(HandleLevelStartEvent);
         PlayerDeathEvent.RemoveListener(HandlePlayerDeathEvent);
         PlayerReachGoalEvent.RemoveListener(HandlePlayerReachGoalEvent);
-        LevelRestartEvent.RemoveListener(HandleLevelRestartEvent);
     }
     private void HandlePlayerReachGoalEvent(PlayerReachGoalEvent info)
     {
@@ -89,11 +87,6 @@ public class PauseMenu : MonoBehaviour
     }
 
     private void HandleLevelStartEvent(LevelStartEvent info)
-    {
-        pauseEnabled = true;
-    }
-
-    private void HandleLevelRestartEvent(LevelRestartEvent info)
     {
         pauseEnabled = true;
     }

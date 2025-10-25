@@ -2716,11 +2716,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3508113455890310528, guid: 6ab18a33cf0175a4e9ca2fe35038cfd2, type: 3}
       propertyPath: baseHealth
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3508113455890310528, guid: 6ab18a33cf0175a4e9ca2fe35038cfd2, type: 3}
       propertyPath: playerInvulnerabilitySeconds
-      value: 2
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 3976520487257845833, guid: 6ab18a33cf0175a4e9ca2fe35038cfd2, type: 3}
       propertyPath: m_Sprite

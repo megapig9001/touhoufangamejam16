@@ -12,6 +12,7 @@ public class DashEnableItem : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             collision.gameObject.GetComponentInParent<PlayerDashController>().dashEnabled = true;
+            JSAM.AudioManager.PlaySound(AudioLibrarySounds.GetItem);
             spriteRenderer.enabled = false;
             collider2d.enabled = false;
         }

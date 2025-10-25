@@ -50,6 +50,7 @@ public class PlayerDashController : MonoBehaviour
         isDashing = true;
         playerController.RotationDisabled = true;
         playerController.PlayerInputDisabled = true;
+        JSAM.AudioManager.PlaySound(AudioLibrarySounds.Dash);
 
         Vector2 dashDirection = CommonMethods.GetVectorFromAngle(playerController.CurrentRotationAngle);
         float time = 0;

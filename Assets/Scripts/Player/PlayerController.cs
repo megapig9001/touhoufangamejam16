@@ -173,4 +173,14 @@ public class PlayerController : MonoBehaviour
             yield return null;
         }
     }
+
+    /// <summary>
+    /// Enables or disables this PlayerController Monobehavior and the attached PlayerHealth and DashController.
+    /// </summary>
+    public void SetPlayerControllersActive(bool active)
+    {
+        enabled = active;
+        GetComponent<PlayerHealth>().enabled = active;
+        GetComponent<PlayerDashController>().enabled = active;
+    }
 }
