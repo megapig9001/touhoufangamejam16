@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27aca8f6da03658478ee1dc44eab7429, type: 3}
+  m_Name: Cloth Level
+  m_EditorClassIdentifier: 
+  <storyEventSteps>k__BackingField:
+  - stepName: Step 1
+    <eventImage>k__BackingField: {fileID: 21300000, guid: 40f2e846b4a5723459d177c2628ddb94, type: 3}
+    <eventText>k__BackingField: "Rusty: So I'm cloth come to life\u2026 "
+    <playTransitionToNextStep>k__BackingField: 0
+  - stepName: Step 2
+    <eventImage>k__BackingField: {fileID: 21300000, guid: 40f2e846b4a5723459d177c2628ddb94, type: 3}
+    <eventText>k__BackingField: 'Chiyo: Yep. '
+    <playTransitionToNextStep>k__BackingField: 0
+  - stepName: Step 3
+    <eventImage>k__BackingField: {fileID: 21300000, guid: 40f2e846b4a5723459d177c2628ddb94, type: 3}
+    <eventText>k__BackingField: "Rusty: And you are too\u2026 "
+    <playTransitionToNextStep>k__BackingField: 0
+  - stepName: Step 4
+    <eventImage>k__BackingField: {fileID: 21300000, guid: 40f2e846b4a5723459d177c2628ddb94, type: 3}
+    <eventText>k__BackingField: 'Chiyo: Yep. '
+    <playTransitionToNextStep>k__BackingField: 0
+  - stepName: Step 5
+    <eventImage>k__BackingField: {fileID: 21300000, guid: 40f2e846b4a5723459d177c2628ddb94, type: 3}
+    <eventText>k__BackingField: 'Rusty: And what we''re doing right now is collecting
+      cloth to make fancier cloth. '
+    <playTransitionToNextStep>k__BackingField: 0
+  - stepName: Step 6
+    <eventImage>k__BackingField: {fileID: 21300000, guid: 40f2e846b4a5723459d177c2628ddb94, type: 3}
+    <eventText>k__BackingField: 'Chiyo: Yep. '
+    <playTransitionToNextStep>k__BackingField: 0
+  - stepName: Step 7
+    <eventImage>k__BackingField: {fileID: 21300000, guid: 40f2e846b4a5723459d177c2628ddb94, type: 3}
+    <eventText>k__BackingField: "Rusty: \u2026 "
+    <playTransitionToNextStep>k__BackingField: 0
+  - stepName: Step 8
+    <eventImage>k__BackingField: {fileID: 21300000, guid: 5cd1a71cf76a6c547b92796a97ccc6b9, type: 3}
+    <eventText>k__BackingField: 'Rusty: Whelp, doesn''t really matter what we''re
+      doing as long as it''s fun! '
+    <playTransitionToNextStep>k__BackingField: 0

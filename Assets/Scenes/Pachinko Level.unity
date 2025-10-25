@@ -2415,7 +2415,7 @@ PrefabInstance:
       objectReference: {fileID: 155128788}
     - target: {fileID: 7131816887081736531, guid: f8ddc11815e3d5c4baabf7875a12edfe, type: 3}
       propertyPath: nextLevel
-      value: Title Screen
+      value: Wing Level
       objectReference: {fileID: 0}
     - target: {fileID: 7131816887081736531, guid: f8ddc11815e3d5c4baabf7875a12edfe, type: 3}
       propertyPath: dialogueSong

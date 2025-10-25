@@ -26,6 +26,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Pachinko Level.unity
     guid: e5c023b63708dfe4a9da5d1987fbbd68
+  - enabled: 1
+    path: Assets/Scenes/Wing Level.unity
+    guid: 18429d71596fc704cadaf7ec9854972d
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
