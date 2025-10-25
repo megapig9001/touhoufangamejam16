@@ -24,6 +24,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 6d6b253e91dd91d4d801b976b3d3d25a, type: 2}
   - {fileID: 11400000, guid: e690504fc65aff14bbcfc5e908ef5a54, type: 2}
   - {fileID: 11400000, guid: f9bd6ce7980e13d428452463ebc336fb, type: 2}
+  - {fileID: 11400000, guid: d6243e79baf0c7545b64bf512f623bd7, type: 2}
+  - {fileID: 11400000, guid: 1e21458b39e37f14c952b92216c793f1, type: 2}
+  - {fileID: 11400000, guid: 96a8dc5cd8cd13d4da2f6a03e656daf3, type: 2}
   useCustomNames: 0
   generatedName: AudioLibrary
   musicEnum: AudioLibraryMusic
@@ -47,4 +50,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 6d6b253e91dd91d4d801b976b3d3d25a, type: 2}
     - {fileID: 11400000, guid: e690504fc65aff14bbcfc5e908ef5a54, type: 2}
     - {fileID: 11400000, guid: f9bd6ce7980e13d428452463ebc336fb, type: 2}
+    - {fileID: 11400000, guid: d6243e79baf0c7545b64bf512f623bd7, type: 2}
+    - {fileID: 11400000, guid: 1e21458b39e37f14c952b92216c793f1, type: 2}
+    - {fileID: 11400000, guid: 96a8dc5cd8cd13d4da2f6a03e656daf3, type: 2}
     foldout: 1
