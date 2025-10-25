@@ -17,6 +17,11 @@ MonoBehaviour:
     <eventImage>k__BackingField: {fileID: 21300000, guid: 40f2e846b4a5723459d177c2628ddb94, type: 3}
     <eventText>k__BackingField: (Press Z to advance text)
     <playTransitionToNextStep>k__BackingField: 0
+  - stepName: Step 1.5
+    <eventImage>k__BackingField: {fileID: 21300000, guid: 40f2e846b4a5723459d177c2628ddb94, type: 3}
+    <eventText>k__BackingField: We join Chiyo the Kinu-Tanuki, and Rusty the Ittan-Momen
+      (the snake-like dude).
+    <playTransitionToNextStep>k__BackingField: 0
   - stepName: Step 2
     <eventImage>k__BackingField: {fileID: 21300000, guid: 40f2e846b4a5723459d177c2628ddb94, type: 3}
     <eventText>k__BackingField: 'Chiyo: Rusty, we need to get some more fabric to

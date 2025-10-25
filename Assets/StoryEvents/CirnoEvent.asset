@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27aca8f6da03658478ee1dc44eab7429, type: 3}
+  m_Name: CirnoEvent
+  m_EditorClassIdentifier: 
+  <storyEventSteps>k__BackingField:
+  - stepName: Step 1
+    <eventImage>k__BackingField: {fileID: 21300000, guid: d8710a727f0dac744a4e3a4e7e17687a, type: 3}
+    <eventText>k__BackingField: 'Rusty: Ew. Who made this maze like this?'
+    <playTransitionToNextStep>k__BackingField: 0
+  - stepName: Step 2
+    <eventImage>k__BackingField: {fileID: 21300000, guid: d8710a727f0dac744a4e3a4e7e17687a, type: 3}
+    <eventText>k__BackingField: "Chiyo: It's just a fairy\u2026"
+    <playTransitionToNextStep>k__BackingField: 0
+  - stepName: Step 3
+    <eventImage>k__BackingField: {fileID: 21300000, guid: d8710a727f0dac744a4e3a4e7e17687a, type: 3}
+    <eventText>k__BackingField: 'Rusty: I hate this drawing.'
+    <playTransitionToNextStep>k__BackingField: 0
