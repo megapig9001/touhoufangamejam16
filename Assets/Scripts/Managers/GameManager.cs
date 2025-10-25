@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] Image storyImage;
     [SerializeField] TextMeshProUGUI storyText;
 
+    public bool EnteredCurrentLevelFromLevelSelectMenu { get; set; } = false;
 
     private void Awake()
     {
@@ -30,11 +31,6 @@ public class GameManager : MonoBehaviour
         }
         else
             Destroy(gameObject);
-    }
-
-    private void Start()
-    {
-        
     }
 
     public IEnumerator GoThroughStoryEvent(StoryEvent storyEvent, float transitionLength = 0)

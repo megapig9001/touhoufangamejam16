@@ -76,7 +76,8 @@ public class PauseMenu : MonoBehaviour
         yield return new WaitForEndOfFrame();
 
         yield return UnityEngine.SceneManagement.SceneManager.LoadSceneAsync(sceneName);
-        
+
+        returningToTitle = null;
     }
 
     #region Event Handling
