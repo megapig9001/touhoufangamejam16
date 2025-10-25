@@ -17,8 +17,8 @@ MonoBehaviour:
   files:
   - {fileID: 8300000, guid: 309e385193801b74698cc5cda6ea18b4, type: 3}
   neverRepeat: 0
-  loopStart: 0
-  loopEnd: 0
+  loopStart: 4.3190002
+  loopEnd: 30.238
   bpm: 120
   relativeVolume: 1
   spatialize: 0
@@ -26,7 +26,7 @@ MonoBehaviour:
   priority: 128
   startingPitch: 1
   pitchShift: 0
-  loopMode: 0
+  loopMode: 2
   delay: 0
   ignoreTimeScale: 0
   maxPlayingInstances: 10
