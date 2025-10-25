@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectedLibrary:
     guid: cfd783cbe844ea94f91f0c078b47e025
-  packagePath: Packages/com.brogrammist.jsam
+  packagePath: Assets/JSAM
   presetsPath: Assets/JSAMPresets/

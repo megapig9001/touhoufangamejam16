@@ -18,7 +18,7 @@ public class LevelManager : MonoBehaviour
 
     private Coroutine handlingLevelOpening = null;
 
-    private Coroutine handlingLevelClosing = null;
+    private Coroutine handlingLevelEnding = null;
 
     public Vector2 RespawnPosition { get; set; }
 
@@ -56,7 +56,7 @@ public class LevelManager : MonoBehaviour
 
     private void HandlePlayerReachGoalEvent(PlayerReachGoalEvent info)
     {
-        StartCoroutine(HandleLevelEnding());
+        handlingLevelEnding = StartCoroutine(HandleLevelEnding());
     }
 
     private void StartLevel()
@@ -86,6 +86,6 @@ public class LevelManager : MonoBehaviour
 
         yield return UnityEngine.SceneManagement.SceneManager.LoadSceneAsync(nextLevel);
 
-        handlingLevelClosing = null;
+        handlingLevelEnding = null;
     }
 }

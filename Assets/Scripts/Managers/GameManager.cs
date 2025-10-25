@@ -34,7 +34,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-
+        StartCoroutine(TransitionFadeOut(3));
     }
 
     public IEnumerator GoThroughStoryEvent(StoryEvent storyEvent, float transitionLength = 0)
@@ -63,11 +63,6 @@ public class GameManager : MonoBehaviour
 
         storyCanvasGroup.alpha = 0;
         storyCanvasGroup.gameObject.SetActive(false);
-    }
-
-    public void CancelCurrentStoryEvent()
-    {
-        hasTransitionedIn = false;
     }
 
     private void DisplayStoryEvent(StoryEventStep step)
@@ -124,6 +119,7 @@ public class GameManager : MonoBehaviour
         Vector2 transitionTargetDims = new Vector2(1, 1);
         if (!hasTransitionedIn)
         {
+            transitionCanvasGroup.alpha = 1;
             time = time == 0 ? defaultTransitionLength : time;
 
             transitionImage.rectTransform.localScale = new Vector2(0, 0);
@@ -145,6 +141,7 @@ public class GameManager : MonoBehaviour
 
         if (hasTransitionedIn)
         {
+            transitionCanvasGroup.alpha = 1;
             time = time == 0 ? defaultTransitionLength : time;
 
             transitionImage.rectTransform.localScale = new Vector2(1, 1);
