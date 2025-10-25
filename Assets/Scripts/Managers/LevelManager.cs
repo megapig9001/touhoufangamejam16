@@ -1,8 +1,6 @@
 using EventManager;
 using System;
 using System.Collections;
-using UnityEditor;
-using UnityEditor.SearchService;
 using UnityEngine;
 
 /// <summary>
@@ -14,7 +12,7 @@ public class LevelManager : MonoBehaviour
     [Tooltip("The StoryEvent object that will be used to play an opening when this LevelManager starts up. If one isn't provided, the level just start immediately.")]
     [SerializeField] StoryEvent storyEventToPlayOnStart;
 
-    [SerializeField] SceneAsset nextLevel;
+    public string nextLevel;
 
     [SerializeField] PlayerController player;
 
@@ -86,7 +84,7 @@ public class LevelManager : MonoBehaviour
     {
         yield return GameManager.instance.TransitionExpandAndCollapseIn();
 
-        yield return UnityEngine.SceneManagement.SceneManager.LoadSceneAsync(nextLevel.name);
+        yield return UnityEngine.SceneManagement.SceneManager.LoadSceneAsync(nextLevel);
 
         handlingLevelClosing = null;
     }
