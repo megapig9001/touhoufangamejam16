@@ -34,7 +34,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        StartCoroutine(TransitionFadeOut(3));
+        
     }
 
     public IEnumerator GoThroughStoryEvent(StoryEvent storyEvent, float transitionLength = 0)

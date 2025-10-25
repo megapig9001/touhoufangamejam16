@@ -11,6 +11,7 @@ public class TitleScreenMenu : MonoBehaviour
     {
         mainMenuCanvasGroup.gameObject.SetActive(true);
         levelSelectMenuCanvasGroup.gameObject.SetActive(false);
+        StartCoroutine(GameManager.instance.TransitionFadeOut(3));
     }
 
     public void OnClickStart(string firstStageScene)

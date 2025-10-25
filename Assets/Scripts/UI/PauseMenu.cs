@@ -3,9 +3,12 @@ using UnityEngine.InputSystem;
 using UnityEngine.EventSystems;
 using EventManager;
 using System;
+using System.Collections;
 
 public class PauseMenu : MonoBehaviour
 {
+    [SerializeField] string titleScreenSceneName = "Title Screen";
+
     [SerializeField] CanvasGroup pauseMenuCanvasGroup;
     
     [SerializeField] private GameObject defaultSelectedButton;
@@ -13,6 +16,8 @@ public class PauseMenu : MonoBehaviour
     private bool pauseMenuOpen = false;
 
     private bool pauseEnabled = false;
+
+    private Coroutine returningToTitle;
 
     private void Awake()
     {
@@ -44,12 +49,17 @@ public class PauseMenu : MonoBehaviour
 
     public void OnClickRestart()
     {
-        Debug.Log("Restart");
+        ClosePauseMenu();
+        new PlayerDeathEvent().InvokeEvent();
     }
 
     public void OnClickToTitle()
     {
-        Debug.Log("To Title");
+        if (returningToTitle == null)
+        {
+            Time.timeScale = 1;
+            returningToTitle = StartCoroutine(LoadScene(titleScreenSceneName));
+        }
     }
 
     private void ClosePauseMenu()
@@ -59,7 +69,15 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1;
     }
 
+    private IEnumerator LoadScene(string sceneName)
+    {
+        pauseMenuCanvasGroup.gameObject.SetActive(false);
+        yield return GameManager.instance.TransitionExpandAndCollapseIn();
+        yield return new WaitForEndOfFrame();
 
+        yield return UnityEngine.SceneManagement.SceneManager.LoadSceneAsync(sceneName);
+        
+    }
 
     #region Event Handling
 
