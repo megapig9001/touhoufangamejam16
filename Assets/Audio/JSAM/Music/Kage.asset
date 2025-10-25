@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bfb8002b44af6934a9ae327c8311d458, type: 3}
-  m_Name: Talk
+  m_Name: Kage
   m_EditorClassIdentifier: 
   safeName: 
   presetDescription: 
   files:
-  - {fileID: 8300000, guid: d7615a5acebb04e4e88c0eea858050b4, type: 3}
+  - {fileID: 8300000, guid: f091640aac319d6478bd06abe9ee68ea, type: 3}
   neverRepeat: 0
   loopStart: 0
-  loopEnd: 47.22939
+  loopEnd: 0
   bpm: 120
   relativeVolume: 1
   spatialize: 0
@@ -26,7 +26,7 @@ MonoBehaviour:
   priority: 128
   startingPitch: 1
   pitchShift: 0
-  loopMode: 1
+  loopMode: 0
   delay: 0
   ignoreTimeScale: 0
   maxPlayingInstances: 10

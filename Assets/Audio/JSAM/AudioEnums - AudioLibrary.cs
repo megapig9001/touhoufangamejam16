@@ -6,5 +6,8 @@
     public enum AudioLibraryMusic {
         Sekibanki,
         Title,
-        Talk
+        Talk,
+        Cirno,
+        Kage,
+        Seija
     }
