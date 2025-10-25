@@ -15,7 +15,7 @@ MonoBehaviour:
   <storyEventSteps>k__BackingField:
   - stepName: Step 1
     <eventImage>k__BackingField: {fileID: 21300000, guid: d8710a727f0dac744a4e3a4e7e17687a, type: 3}
-    <eventText>k__BackingField: 'Rusty: Ew. Who made this maze like this?'
+    <eventText>k__BackingField: 'Rusty: Ew. Who drew this maze like this?'
     <playTransitionToNextStep>k__BackingField: 0
   - stepName: Step 2
     <eventImage>k__BackingField: {fileID: 21300000, guid: d8710a727f0dac744a4e3a4e7e17687a, type: 3}
