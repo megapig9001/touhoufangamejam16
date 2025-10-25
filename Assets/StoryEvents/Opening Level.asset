@@ -24,8 +24,8 @@ MonoBehaviour:
     <playTransitionToNextStep>k__BackingField: 0
   - stepName: Step 3
     <eventImage>k__BackingField: {fileID: 0}
-    <eventText>k__BackingField: 'Chiyo: Rusty, we need to get some more fabric to
-      make Halloween costumes! Can you go look for some? '
+    <eventText>k__BackingField: 'Rusty: Sure thing! That means I get to use Turbo
+      Mode!'
     <playTransitionToNextStep>k__BackingField: 0
   - stepName: Step 4
     <eventImage>k__BackingField: {fileID: 0}
