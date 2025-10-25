@@ -11,6 +11,9 @@ public class PlayerDashController : MonoBehaviour
     [Range(0f, 7f)]
     public float dashAccelerationRate = 1.5f;
 
+    [Range(0f, 7f)]
+    [SerializeField] private float dashCooldown = 0.5f;
+
     [SerializeField] bool enableDashByDefault = false;
 
     public bool dashEnabled { get; set; }
@@ -35,7 +38,7 @@ public class PlayerDashController : MonoBehaviour
     {
         if (dashEnabled && Keyboard.current.xKey.isPressed)
         {
-            if (!isDashing && !playerController.InHitstun)
+            if (handlingDash == null && !playerController.InHitstun)
             {
                 handlingDash = StartCoroutine(HandleDash());
             }
@@ -66,6 +69,10 @@ public class PlayerDashController : MonoBehaviour
         }
 
         isDashing = false;
+
+        Debug.Log("waiting for cooldown: " + dashCooldown);
+        yield return new WaitForSeconds(dashCooldown);
+
         handlingDash = null;
     }
 

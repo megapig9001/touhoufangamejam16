@@ -334,6 +334,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dashSpeed: 20
   dashAccelerationRate: 1.5
+  dashCooldown: 0.5
   enableDashByDefault: 0
 --- !u!1 &8775209809988069126
 GameObject:
