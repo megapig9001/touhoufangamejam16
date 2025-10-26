@@ -464,8 +464,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 15.4174, y: 15.4175}
-  m_SizeDelta: {x: 1870.2306, y: 240.1494}
+  m_AnchoredPosition: {x: 15.4174, y: 25.1051}
+  m_SizeDelta: {x: 1870.2306, y: 259.5247}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &749944617637521122
 CanvasRenderer:
@@ -498,8 +498,8 @@ MonoBehaviour:
   m_text: Rusty, we need to get some more fabric to make Halloween costumes! Can
     you go look for some?
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c2565e30d6092e44f90328d84d557dbc, type: 2}
+  m_sharedMaterial: {fileID: -6861674001507085031, guid: c2565e30d6092e44f90328d84d557dbc, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
