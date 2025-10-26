@@ -115,7 +115,7 @@ public class GameManager : MonoBehaviour
     /// <returns></returns>
     public IEnumerator TransitionExpandAndCollapseIn(float time = 0)
     {
-        Vector2 transitionTargetDims = new Vector2(1, 1);
+        Vector2 transitionTargetDims = new Vector2(1.4f, 1.4f);
         if (!hasTransitionedIn)
         {
             transitionCanvasGroup.alpha = 1;
@@ -143,7 +143,7 @@ public class GameManager : MonoBehaviour
             transitionCanvasGroup.alpha = 1;
             time = time == 0 ? defaultTransitionLength : time;
 
-            transitionImage.rectTransform.localScale = new Vector2(1, 1);
+            transitionImage.rectTransform.localScale = new Vector2(1.4f, 1.4f);
 
             yield return transitionImage.rectTransform.DOScale(transitionTargetDims, time).WaitForCompletion();
 
