@@ -3,6 +3,7 @@ using UnityEngine;
 public class Rotater : MonoBehaviour
 {
     public bool canRotate;
+    public int rotateValue;
     public float initialX;
     public float initialY;
     public float initialZ;
@@ -24,7 +25,7 @@ public class Rotater : MonoBehaviour
             canRotate = true;
         }
         if (canRotate)
-            transform.Rotate(0, 0, 2 * Time.deltaTime); //rotates 50 degrees per second around z axis
+            transform.Rotate(0, 0, rotateValue * Time.deltaTime); //rotates 50 degrees per second around z axis
         if (playerHealth.GetCurrentHealth() <= 0)
         {
             canRotate = false;
