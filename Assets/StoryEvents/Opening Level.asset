@@ -15,7 +15,7 @@ MonoBehaviour:
   <storyEventSteps>k__BackingField:
   - stepName: Step 1
     <eventImage>k__BackingField: {fileID: 21300000, guid: 40f2e846b4a5723459d177c2628ddb94, type: 3}
-    <eventText>k__BackingField: (Press Z to advance text)
+    <eventText>k__BackingField: (Press Z to advance text; buttons may vary on controller)
     <playTransitionToNextStep>k__BackingField: 0
   - stepName: Step 1.5
     <eventImage>k__BackingField: {fileID: 21300000, guid: 40f2e846b4a5723459d177c2628ddb94, type: 3}
