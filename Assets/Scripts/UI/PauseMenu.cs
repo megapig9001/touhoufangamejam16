@@ -19,14 +19,18 @@ public class PauseMenu : MonoBehaviour
 
     private Coroutine returningToTitle;
 
+    private PlayerInput inputSystem;
+
+
     private void Awake()
     {
         pauseMenuCanvasGroup.gameObject.SetActive(false);
+        inputSystem = GetComponent<PlayerInput>();
     }
 
     void Update()
     {
-        if (pauseEnabled && (Keyboard.current.escapeKey.wasPressedThisFrame || Keyboard.current.pKey.wasPressedThisFrame))
+        if (pauseEnabled && (inputSystem.actions["Pause"].WasPressedThisFrame()))
         {
             if (!pauseMenuOpen)
             {
