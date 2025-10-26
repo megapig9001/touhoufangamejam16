@@ -2884,7 +2884,7 @@ PrefabInstance:
     - target: {fileID: 7131816887081736531, guid: f8ddc11815e3d5c4baabf7875a12edfe, type: 3}
       propertyPath: storyEventToPlayOnStart
       value: 
-      objectReference: {fileID: 11400000, guid: 2ffdb3461017aad4fa84561dc1785124, type: 2}
+      objectReference: {fileID: 11400000, guid: 90d9bcdb8ebe7b3468424be5e5c887ea, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
