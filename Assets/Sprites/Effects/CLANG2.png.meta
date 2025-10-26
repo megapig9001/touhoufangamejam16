@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: dfff3e01acee3ef4e96fa7a54524bfbb
+guid: 779df2e1a3eac1647a177bee9c63055b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 624262481517721930
-    second: CLANG3SEC_0
+      213: 6067923058244709344
+    second: CLANG2_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -46,12 +46,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 60
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -126,23 +126,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: CLANG3SEC_0
+      name: CLANG2_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 2
         y: 0
-        width: 136
-        height: 105
+        width: 129
+        height: 106
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a49b7716b63d9a800800000000000000
-      internalID: 624262481517721930
+      spriteID: 0ebe31b4fd7953450800000000000000
+      internalID: 6067923058244709344
       vertices: []
       indices: 
       edges: []
@@ -151,7 +151,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: af1846871bf1ed24aa2c4f5bba34d80b
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      CLANG3SEC_0: 624262481517721930
+      CLANG2_0: 6067923058244709344
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

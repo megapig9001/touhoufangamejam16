@@ -12,6 +12,9 @@ public class HUD : MonoBehaviour
     [SerializeField]
     TextMeshProUGUI playerHealthText;
 
+    [SerializeField]
+    private ParticleSystem timeAddPopupEffect;
+
     private void OnEnable()
     {
         EventManager.LevelStartEvent.AddListener(HandleLevelStartEvent);
@@ -38,9 +41,11 @@ public class HUD : MonoBehaviour
         playerHealthText.text = info.newCurrentHealth.ToString();
 
         //Increase time upon taking damage
-        if(info.healthChangeValue < 0)
+        if(info.healthChangeValue < 0 && info.newCurrentHealth > 0)
         {
             timer.AddToTimer(3);
+            timeAddPopupEffect.transform.position = info.playerPosition;
+            timeAddPopupEffect.Play();
         }
     }
 
