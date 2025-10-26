@@ -521,11 +521,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7224169820703767324, guid: ef198e313bf874f46b36939945a67140, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 68.17
+      value: 68.147
       objectReference: {fileID: 0}
     - target: {fileID: 7224169820703767324, guid: ef198e313bf874f46b36939945a67140, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -7.7
+      value: -7.841
       objectReference: {fileID: 0}
     - target: {fileID: 7224169820703767324, guid: ef198e313bf874f46b36939945a67140, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1527,8 +1527,8 @@ MonoBehaviour:
   - {x: 54.936092, y: -8.726825}
   - {x: 55, y: -9.999499}
   - {x: 48.17872, y: -9.99958}
-  - {x: 38.530468, y: -3.7494543}
-  - {x: 26.440046, y: -9.999326}
+  - {x: 38.53035, y: -3.7493784}
+  - {x: 26.440134, y: -9.99928}
   - {x: 23.112734, y: -4.9995003}
   - {x: 17.862886, y: -4.9997315}
   - {x: 14.684081, y: -9.999499}
@@ -1718,8 +1718,8 @@ EdgeCollider2D:
   - {x: 54.936092, y: -8.726825}
   - {x: 55, y: -9.999499}
   - {x: 48.17872, y: -9.99958}
-  - {x: 38.530468, y: -3.7494543}
-  - {x: 26.440046, y: -9.999326}
+  - {x: 38.53035, y: -3.7493784}
+  - {x: 26.440134, y: -9.99928}
   - {x: 23.112734, y: -4.9995003}
   - {x: 17.862886, y: -4.9997315}
   - {x: 14.684081, y: -9.999499}
