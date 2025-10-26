@@ -40,7 +40,8 @@ public class PlayerHealth : MonoBehaviour
         if (!CanTakeDamage || handlingOnHitInvulnerability != null)
             return;
 
-        TakeDamage(1);
+        Vector2 collisionPoint = collision.GetContact(0).point;
+        TakeDamage(1, collisionPoint.x, collisionPoint.y);
 
         if (CurrentHealth != 0)
         {
@@ -58,7 +59,8 @@ public class PlayerHealth : MonoBehaviour
             return;
 
         JSAM.AudioManager.PlaySound(AudioLibrarySounds.Hit);
-        TakeDamage(1);
+        Vector2 collisionPoint = collision.GetContact(0).point;
+        TakeDamage(1, collisionPoint.x, collisionPoint.y);
 
         if (CurrentHealth != 0)
         {
@@ -85,7 +87,7 @@ public class PlayerHealth : MonoBehaviour
     }
 
 
-    public void TakeDamage(int damageValue)
+    public void TakeDamage(int damageValue, float collisionPosX = 0, float collisionPosY = 0)
     {
         int newHealthValue = currentHealth - damageValue;
 
@@ -95,7 +97,7 @@ public class PlayerHealth : MonoBehaviour
         }
         else
         {
-            SetHealth(newHealthValue);
+            SetHealth(newHealthValue, collisionPosX, collisionPosY);
         }
     }
 
@@ -103,7 +105,7 @@ public class PlayerHealth : MonoBehaviour
     /// Set the current health of the player
     /// </summary>
     /// <param name="value"></param>
-    public void SetHealth(int value)
+    public void SetHealth(int value, float collisionPosX = 0, float collisionPosY = 0)
     {
         EventManager.PlayerHealthChangeEvent e = new EventManager.PlayerHealthChangeEvent();
 
@@ -113,6 +115,7 @@ public class PlayerHealth : MonoBehaviour
         
         e.newCurrentHealth = currentHealth;
         e.healthChangeValue = healthChange;
+        e.playerPosition = new Vector2(collisionPosX, collisionPosY);
         e.InvokeEvent();
     }
 
