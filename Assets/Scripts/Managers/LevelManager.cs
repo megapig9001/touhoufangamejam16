@@ -118,6 +118,7 @@ public class LevelManager : MonoBehaviour
 
     private IEnumerator HandleLevelRestart()
     {
+        player.gameObject.SetActive(true);
         player.transform.localScale = Vector2.zero;
         player.SetPlayerControllersActive(false);
 
