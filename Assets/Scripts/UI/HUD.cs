@@ -2,7 +2,6 @@ using UnityEngine;
 using System;
 using TMPro;
 using EventManager;
-using UnityEditor.SearchService;
 using UnityEngine.SceneManagement;
 
 public class HUD : MonoBehaviour
