@@ -97,12 +97,15 @@ public class LevelManager : MonoBehaviour
 
     private IEnumerator HandleLevelEnding()
     {
+        player.gameObject.SetActive(false);
+
         yield return GameManager.instance.TransitionExpandAndCollapseIn();
 
         if (GameManager.instance.EnteredCurrentLevelFromLevelSelectMenu)
         {
             //This event is used to trigger the "level clear" menu to appear, displaying final time and Retry/Quit options
             //Currently, should only display when a level is selected from the Level Select menu
+            
             new LevelCompleteEvent().InvokeEvent();
         }
         else
