@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27aca8f6da03658478ee1dc44eab7429, type: 3}
+  m_Name: Final Level
+  m_EditorClassIdentifier: 
+  <storyEventSteps>k__BackingField:
+  - stepName: Step 1
+    <eventImage>k__BackingField: {fileID: 21300000, guid: 40f2e846b4a5723459d177c2628ddb94, type: 3}
+    <eventText>k__BackingField: 'Rusty: This looks like the last piece of cloth. '
+    <playTransitionToNextStep>k__BackingField: 0
+  - stepName: Step 2
+    <eventImage>k__BackingField: {fileID: 21300000, guid: 40f2e846b4a5723459d177c2628ddb94, type: 3}
+    <eventText>k__BackingField: 'Chiyo: Yep! We''ll have everything we need after
+      this! '
+    <playTransitionToNextStep>k__BackingField: 0
+  - stepName: Step 3
+    <eventImage>k__BackingField: {fileID: 21300000, guid: 40f2e846b4a5723459d177c2628ddb94, type: 3}
+    <eventText>k__BackingField: "Rusty: Hm\u2026 I feel like I could've done these
+      mazes a bit faster\u2026 "
+    <playTransitionToNextStep>k__BackingField: 0
+  - stepName: Step 4
+    <eventImage>k__BackingField: {fileID: 21300000, guid: 40f2e846b4a5723459d177c2628ddb94, type: 3}
+    <eventText>k__BackingField: 'Chiyo: Maybe try out time attack later. '
+    <playTransitionToNextStep>k__BackingField: 0
+  - stepName: Step 5
+    <eventImage>k__BackingField: {fileID: 21300000, guid: 40f2e846b4a5723459d177c2628ddb94, type: 3}
+    <eventText>k__BackingField: 'Rusty: Time a-what? '
+    <playTransitionToNextStep>k__BackingField: 0
+  - stepName: Step 6
+    <eventImage>k__BackingField: {fileID: 6161179743152453895, guid: 8984766ff0235e243883ec2a551af469, type: 3}
+    <eventText>k__BackingField: 'Chiyo: I don''t know, someone told me to tell you
+      that. '
+    <playTransitionToNextStep>k__BackingField: 0
+  - stepName: Step 7
+    <eventImage>k__BackingField: {fileID: 21300000, guid: 40f2e846b4a5723459d177c2628ddb94, type: 3}
+    <eventText>k__BackingField: 'Chiyo: Anyways, thanks for all the help Rusty! '
+    <playTransitionToNextStep>k__BackingField: 0
+  - stepName: Step 8
+    <eventImage>k__BackingField: {fileID: 21300000, guid: 5cd1a71cf76a6c547b92796a97ccc6b9, type: 3}
+    <eventText>k__BackingField: 'Rusty: Heh Heh! We can do anything together!'
+    <playTransitionToNextStep>k__BackingField: 0
+  - stepName: Step 8
+    <eventImage>k__BackingField: {fileID: 21300000, guid: 5cd1a71cf76a6c547b92796a97ccc6b9, type: 3}
+    <eventText>k__BackingField: 'Chiyo: Anyways, thanks for all the help Rusty! '
+    <playTransitionToNextStep>k__BackingField: 0
