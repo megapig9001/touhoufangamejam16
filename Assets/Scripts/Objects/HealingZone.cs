@@ -11,8 +11,9 @@ public class HealingZone : MonoBehaviour
             playerHealth.SetHealth(playerHealth.BaseHealth);
             playerHealth.CanTakeDamage = false;
             playerHealth.SetPlayerSpriteColor(Color.magenta);
+            JSAM.AudioManager.PlaySound(AudioLibrarySounds.Heal);
         }
-        
+
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -20,6 +21,9 @@ public class HealingZone : MonoBehaviour
         if (collision.gameObject.CompareTag("PlayerHead"))
         {
             PlayerHealth playerHealth = collision.gameObject.GetComponentInParent<PlayerHealth>();
+            //for safety. Sometimes the player will have already been disabled by the time we get to this point.
+            if (playerHealth == null)
+                return;
             playerHealth.CanTakeDamage = true;
             playerHealth.SetPlayerSpriteColor(Color.white);
         }

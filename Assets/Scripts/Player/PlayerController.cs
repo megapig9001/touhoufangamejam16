@@ -142,12 +142,13 @@ public class PlayerController : MonoBehaviour
 
     private IEnumerator HandleHitstun(Collision2D collision)
     {
-        //Hitstun has already been triggered in the past knockbackTime-seconds. Just reapply the velocities and nothing else.
         if (!InHitstun)
         {
+            InHitstun = true;
+            
             body.linearVelocity = Vector2.zero;
             body.angularVelocity = 0;
-            InHitstun = true;
+            
             PlayerInputDisabled = true;
             RotationDisabled = true;
 
@@ -164,6 +165,7 @@ public class PlayerController : MonoBehaviour
             RotationDisabled = false;
             InHitstun = false;
         }
+        //Hitstun has already been triggered in the past knockbackTime-seconds. Just reapply the velocities and nothing else.
         else
         {
             body.linearVelocity = new Vector2(body.position.x - collision.GetContact(0).point.x, body.position.y - collision.GetContact(0).point.y).normalized
