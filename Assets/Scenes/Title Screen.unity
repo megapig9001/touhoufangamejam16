@@ -3502,7 +3502,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d1157ea88eef7d4392f3c4ed1a9f1e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: Thanks Level
+  sceneName: Koakuma Level
   currentRecordText: {fileID: 1924882079}
 --- !u!114 &1339742221
 MonoBehaviour:
