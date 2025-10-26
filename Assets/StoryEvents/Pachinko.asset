@@ -35,5 +35,5 @@ MonoBehaviour:
   - stepName: Step 5
     <eventImage>k__BackingField: {fileID: 545685052738344508, guid: 002f0aff848de664c8ffb440034ad454, type: 3}
     <eventText>k__BackingField: 'Chiyo: Well, remember. If you end up in a heal pocket,
-      you need to touch the heart with your head.'
+      you need to touch it with your head.'
     <playTransitionToNextStep>k__BackingField: 0

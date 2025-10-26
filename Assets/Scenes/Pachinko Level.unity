@@ -2443,12 +2443,20 @@ PrefabInstance:
       value: LevelGoal
       objectReference: {fileID: 0}
     - target: {fileID: 7224169820703767324, guid: ef198e313bf874f46b36939945a67140, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7224169820703767324, guid: ef198e313bf874f46b36939945a67140, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7224169820703767324, guid: ef198e313bf874f46b36939945a67140, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.03999996
       objectReference: {fileID: 0}
     - target: {fileID: 7224169820703767324, guid: ef198e313bf874f46b36939945a67140, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.3099995
+      value: 1.24
       objectReference: {fileID: 0}
     - target: {fileID: 7224169820703767324, guid: ef198e313bf874f46b36939945a67140, type: 3}
       propertyPath: m_LocalPosition.z
