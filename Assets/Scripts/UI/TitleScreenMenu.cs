@@ -6,6 +6,7 @@ public class TitleScreenMenu : MonoBehaviour
 {
     [SerializeField] CanvasGroup mainMenuCanvasGroup;
     [SerializeField] CanvasGroup levelSelectMenuCanvasGroup;
+    [SerializeField] GameObject gameLogo;
 
     private Coroutine loadingScene;
 
@@ -28,6 +29,7 @@ public class TitleScreenMenu : MonoBehaviour
     public void OnClickLevelSelect()
     {
         mainMenuCanvasGroup.gameObject.SetActive(false);
+        gameLogo.SetActive(false);
         levelSelectMenuCanvasGroup.gameObject.SetActive(true);
     }
 
@@ -54,6 +56,7 @@ public class TitleScreenMenu : MonoBehaviour
     {
         mainMenuCanvasGroup.gameObject.SetActive(true);
         levelSelectMenuCanvasGroup.gameObject.SetActive(false);
+        gameLogo.SetActive(true);
     }
 
     public void MenuUtil_SetNewActiveGameObject(GameObject gameObject)
