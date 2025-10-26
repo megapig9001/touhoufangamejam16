@@ -46,6 +46,11 @@ public class TimerController : MonoBehaviour
         elapsedTime = 0f;
     }
 
+    public void AddToTimer(float toAdd)
+    {
+        elapsedTime += toAdd;
+    }
+
 	/// <summary>
     /// Update is called once per frame
 	/// </summary> 

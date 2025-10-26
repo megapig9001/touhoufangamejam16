@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 91f6cec701ad2e1478bfbca3344e2816
+guid: 1628f74ef277f254eb32203c684eebda
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -9153053171897987194
-    second: rustytanglenobutton_0
+      213: -3283613988626071724
+    second: CLANG_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: rustytanglenobutton_0
+      name: CLANG_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 335
-        height: 50
+        y: 1
+        width: 101
+        height: 94
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 68f02c692a2d9f080800000000000000
-      internalID: -9153053171897987194
+      spriteID: 45f707489724e62d0800000000000000
+      internalID: -3283613988626071724
       vertices: []
       indices: 
       edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      rustytanglenobutton_0: -9153053171897987194
+      CLANG_0: -3283613988626071724
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

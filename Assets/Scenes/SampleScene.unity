@@ -1479,6 +1479,10 @@ PrefabInstance:
       propertyPath: canDash
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 426188773127116068, guid: 6ab18a33cf0175a4e9ca2fe35038cfd2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3508113455890310528, guid: 6ab18a33cf0175a4e9ca2fe35038cfd2, type: 3}
       propertyPath: baseHealth
       value: 4
@@ -1490,7 +1494,7 @@ PrefabInstance:
     - target: {fileID: 3976520487257845833, guid: 6ab18a33cf0175a4e9ca2fe35038cfd2, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -3853142865350623160, guid: 6ee1b4decc18bcc4d84f88ea0ebf1ef0, type: 3}
+      objectReference: {fileID: -9153053171897987194, guid: 91f6cec701ad2e1478bfbca3344e2816, type: 3}
     - target: {fileID: 3976520487257845833, guid: 6ab18a33cf0175a4e9ca2fe35038cfd2, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
@@ -1549,7 +1553,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7397772349743341838, guid: 6ab18a33cf0175a4e9ca2fe35038cfd2, type: 3}
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 4747776016791722831, guid: 6ab18a33cf0175a4e9ca2fe35038cfd2, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 1624617724947671163, guid: 6ab18a33cf0175a4e9ca2fe35038cfd2, type: 3}

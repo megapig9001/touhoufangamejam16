@@ -24,6 +24,9 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField]
     private GameObject playerFine, playerHurt;
 
+    [SerializeField]
+    private ParticleSystem collisionEffect;
+
     private void Start()
     {
         SetHealth(baseHealth);
@@ -32,6 +35,8 @@ public class PlayerHealth : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         JSAM.AudioManager.PlaySound(AudioLibrarySounds.Hit);
+        PlayCollisionEffect(collision.GetContact(0).point);
+
         if (!CanTakeDamage || handlingOnHitInvulnerability != null)
             return;
 
@@ -95,15 +100,19 @@ public class PlayerHealth : MonoBehaviour
     }
 
     /// <summary>
-    /// Set the current health of the player. Equivalent to setting CurrentHealth = value
+    /// Set the current health of the player
     /// </summary>
     /// <param name="value"></param>
     public void SetHealth(int value)
     {
-        currentHealth = value > baseHealth ? baseHealth : value;
-
         EventManager.PlayerHealthChangeEvent e = new EventManager.PlayerHealthChangeEvent();
+
+        int healthChange = value - currentHealth;
+
+        currentHealth = value > baseHealth ? baseHealth : value;
+        
         e.newCurrentHealth = currentHealth;
+        e.healthChangeValue = healthChange;
         e.InvokeEvent();
     }
 
@@ -125,5 +134,11 @@ public class PlayerHealth : MonoBehaviour
     public int GetCurrentHealth()
     {
         return currentHealth;
+    }
+
+    public void PlayCollisionEffect(Vector2 collisionPoint)
+    {
+        collisionEffect.transform.position = collisionPoint;
+        collisionEffect.Play();
     }
 }

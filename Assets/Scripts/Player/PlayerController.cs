@@ -144,15 +144,17 @@ public class PlayerController : MonoBehaviour
     {
         if (!InHitstun)
         {
+            Vector2 collisionPoint = collision.GetContact(0).point;
+
             InHitstun = true;
-            
+
             body.linearVelocity = Vector2.zero;
             body.angularVelocity = 0;
-            
+
             PlayerInputDisabled = true;
             RotationDisabled = true;
 
-            body.linearVelocity = new Vector2(body.position.x - collision.GetContact(0).point.x, body.position.y - collision.GetContact(0).point.y).normalized
+            body.linearVelocity = new Vector2(body.position.x - collisionPoint.x, body.position.y - collision.GetContact(0).point.y).normalized
                 * knockbackForce;
 
             body.angularVelocity = -1 * Mathf.Sign(rotationSpeed) * knockbackRotationForce;

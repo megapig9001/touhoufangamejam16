@@ -66,6 +66,7 @@ namespace EventManager
     public class PlayerHealthChangeEvent : Event<PlayerHealthChangeEvent>
     {
         public int newCurrentHealth;
+        public int healthChangeValue = 1; //postive means gained health, negative means lost health
     }
 
     public class LevelStartEvent : Event<LevelStartEvent>

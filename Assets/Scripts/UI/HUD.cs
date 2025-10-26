@@ -36,6 +36,12 @@ public class HUD : MonoBehaviour
     private void HandlePlayerHealthChangeEvent(PlayerHealthChangeEvent info)
     {
         playerHealthText.text = info.newCurrentHealth.ToString();
+
+        //Increase time upon taking damage
+        if(info.healthChangeValue < 0)
+        {
+            timer.AddToTimer(3);
+        }
     }
 
     private void HandleLevelRestartEvent(EventManager.LevelRestartEvent info)
