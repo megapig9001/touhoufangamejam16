@@ -5,6 +5,7 @@ using DG.Tweening;
 using System;
 using TMPro;
 using UnityEngine.InputSystem;
+using UnityEngine.EventSystems;
 
 public class GameManager : MonoBehaviour
 {
@@ -18,6 +19,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] CanvasGroup storyCanvasGroup;
     [SerializeField] Image storyImage;
     [SerializeField] TextMeshProUGUI storyText;
+    private PlayerInput inputSystem;
 
     public bool EnteredCurrentLevelFromLevelSelectMenu { get; set; } = false;
 
@@ -28,6 +30,7 @@ public class GameManager : MonoBehaviour
         {
             instance = this;
             transitionCanvasGroup.gameObject.SetActive(true);
+            inputSystem = GetComponent<PlayerInput>();
         }
         else
             Destroy(gameObject);
@@ -47,8 +50,8 @@ public class GameManager : MonoBehaviour
             DisplayStoryEvent(step);
 
             yield return TransitionExpandAndCollapseOut(transitionLength);
-
-            yield return new WaitUntil(() => Keyboard.current.zKey.wasPressedThisFrame);
+            
+            yield return new WaitUntil(() => inputSystem.actions["SpeedUp"].WasPressedThisFrame());
 
             if(step.playTransitionToNextStep)
                 yield return TransitionExpandAndCollapseIn(transitionLength);

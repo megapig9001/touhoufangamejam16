@@ -29,6 +29,8 @@ public class PlayerController : MonoBehaviour
 
     private Rigidbody2D body;
 
+    private PlayerInput inputSystem;
+
     public bool PlayerInputDisabled { get; set; }
     public bool RotationDisabled { get; set; }
 
@@ -44,6 +46,7 @@ public class PlayerController : MonoBehaviour
         body = GetComponent<Rigidbody2D>();
         StartingRotationSpeed = rotationSpeed;
         StartingSpeed = moveSpeed;
+        inputSystem = GetComponent<PlayerInput>();
     }
 
     // Update is called once per frame
@@ -113,15 +116,15 @@ public class PlayerController : MonoBehaviour
 
     private void HandleMovement()
     {
-        float xInput = Input.GetAxis("Horizontal");
-        float yInput = Input.GetAxis("Vertical");
-        Vector2 inputVector = new Vector2(xInput, yInput);
+        Vector2 inputVector = inputSystem.actions["Move"].ReadValue<Vector2>();
+        float xInput = inputVector.x;
+        float yInput = inputVector.y;
 
         bool canMoveWithInput = !PlayerInputDisabled;
 
         if (canMoveWithInput)
         {
-            float speed = Keyboard.current.zKey.isPressed ? CurrentMoveSpeed * fastMoveSpeedMultiplier : CurrentMoveSpeed;
+            float speed = inputSystem.actions["SpeedUp"].IsPressed() ? CurrentMoveSpeed * fastMoveSpeedMultiplier : CurrentMoveSpeed;
 
             if (Mathf.Abs(xInput) > 0.001)
             {
@@ -187,4 +190,9 @@ public class PlayerController : MonoBehaviour
         GetComponent<PlayerHealth>().enabled = active;
         GetComponent<PlayerDashController>().enabled = active;
     }
+
+    //private void OnSpeedUp(InputAction.CallbackContext context)
+    //{
+    //    playerSpeedUpPressed = context.action.IsPressed();
+    //}
 }

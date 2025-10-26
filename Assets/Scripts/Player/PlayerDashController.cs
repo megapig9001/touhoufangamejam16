@@ -20,6 +20,7 @@ public class PlayerDashController : MonoBehaviour
 
     private PlayerController playerController;
     private Rigidbody2D body;
+    private PlayerInput inputSystem;
 
     private Coroutine handlingDash;
 
@@ -32,11 +33,12 @@ public class PlayerDashController : MonoBehaviour
         playerController = GetComponent<PlayerController>();
         body = GetComponent<Rigidbody2D>();
         dashEnabled = enableDashByDefault;
+        inputSystem = GetComponent<PlayerInput>();
     }
 
     private void Update()
     {
-        if (dashEnabled && Keyboard.current.xKey.wasPressedThisFrame)
+        if (dashEnabled && inputSystem.actions["Dash"].WasPressedThisFrame())
         {
             if (handlingDash == null && !playerController.InHitstun)
             {
@@ -58,7 +60,7 @@ public class PlayerDashController : MonoBehaviour
             body.linearVelocity = Vector2.Lerp(Vector2.zero, dashDirection.normalized * dashSpeed, time * dashAccelerationRate);
             //body.linearVelocity = dashDirection.normalized * dashSpeed;
             time += Time.fixedDeltaTime;
-            return Keyboard.current.xKey.isPressed && !playerController.InHitstun;
+            return inputSystem.actions["Dash"].IsPressed() && !playerController.InHitstun;
         });
 
         //If the player exited out of the dash from entering hitstun, then these will get set in PlayerController once hitstun ends
