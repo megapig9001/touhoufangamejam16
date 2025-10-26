@@ -50,5 +50,6 @@ MonoBehaviour:
     <playTransitionToNextStep>k__BackingField: 0
   - stepName: Step 8
     <eventImage>k__BackingField: {fileID: 21300000, guid: 5cd1a71cf76a6c547b92796a97ccc6b9, type: 3}
-    <eventText>k__BackingField: 'Chiyo: Anyways, thanks for all the help Rusty! '
+    <eventText>k__BackingField: '(This is the last level. Try out time attack when
+      you finish!) '
     <playTransitionToNextStep>k__BackingField: 0
