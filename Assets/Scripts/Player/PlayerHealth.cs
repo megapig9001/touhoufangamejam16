@@ -47,6 +47,24 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (!CanTakeDamage || handlingOnHitInvulnerability != null)
+            return;
+
+        JSAM.AudioManager.PlaySound(AudioLibrarySounds.Hit);
+        TakeDamage(1);
+
+        if (CurrentHealth != 0)
+        {
+            handlingOnHitInvulnerability = StartCoroutine(HandleInvulnerability());
+        }
+        else
+        {
+            new EventManager.PlayerDeathEvent().InvokeEvent();
+        }
+    }
+
     private IEnumerator HandleInvulnerability()
     {
 

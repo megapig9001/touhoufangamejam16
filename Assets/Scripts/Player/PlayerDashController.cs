@@ -25,7 +25,7 @@ public class PlayerDashController : MonoBehaviour
 
     private bool isDashing = false;
 
-    private bool IsDashing { get => isDashing && handlingDash != null; }
+    public bool IsDashing { get => isDashing; }
 
     private void Awake()
     {
@@ -36,7 +36,7 @@ public class PlayerDashController : MonoBehaviour
 
     private void Update()
     {
-        if (dashEnabled && Keyboard.current.xKey.isPressed)
+        if (dashEnabled && Keyboard.current.xKey.wasPressedThisFrame)
         {
             if (handlingDash == null && !playerController.InHitstun)
             {
@@ -58,21 +58,21 @@ public class PlayerDashController : MonoBehaviour
             body.linearVelocity = Vector2.Lerp(Vector2.zero, dashDirection.normalized * dashSpeed, time * dashAccelerationRate);
             //body.linearVelocity = dashDirection.normalized * dashSpeed;
             time += Time.fixedDeltaTime;
-            return Keyboard.current.xKey.isPressed || playerController.InHitstun;
+            return Keyboard.current.xKey.isPressed && !playerController.InHitstun;
         });
 
         //If the player exited out of the dash from entering hitstun, then these will get set in PlayerController once hitstun ends
         if (!playerController.InHitstun)
         {
             body.linearVelocity = Vector2.zero;
+            body.angularVelocity = 0;
             playerController.RotationDisabled = false;
             playerController.PlayerInputDisabled = false;
         }
 
         isDashing = false;
-
-        Debug.Log("waiting for cooldown: " + dashCooldown);
-        yield return new WaitForSeconds(dashCooldown);
+        if (!playerController.InHitstun)
+            yield return new WaitForSeconds(dashCooldown);
 
         handlingDash = null;
     }
