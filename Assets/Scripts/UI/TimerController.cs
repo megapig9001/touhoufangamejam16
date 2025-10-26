@@ -15,7 +15,7 @@ public class TimerController : MonoBehaviour
     private TimeSpan timePlaying;
     private bool timerRunning = false;
 
-    private float elapsedTime;
+    public float elapsedTime { get; private set; }
 
     public string TimerText { get => timeCounter.text; }
 
