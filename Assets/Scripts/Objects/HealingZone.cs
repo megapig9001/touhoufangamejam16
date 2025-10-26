@@ -6,6 +6,7 @@ public class HealingZone : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("PlayerHead"))
         {
+            JSAM.AudioManager.PlaySound(AudioLibrarySounds.Heal);
             PlayerHealth playerHealth = collision.gameObject.GetComponentInParent<PlayerHealth>();
             playerHealth.SetHealth(playerHealth.BaseHealth);
             playerHealth.CanTakeDamage = false;

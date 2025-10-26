@@ -121,4 +121,9 @@ public class PlayerHealth : MonoBehaviour
     {
         playerSpriteRenderer.color = color;
     }
+
+    public int GetCurrentHealth()
+    {
+        return currentHealth;
+    }
 }

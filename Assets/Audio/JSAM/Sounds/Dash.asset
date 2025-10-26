@@ -15,7 +15,7 @@ MonoBehaviour:
   safeName: 
   presetDescription: 
   files:
-  - {fileID: 8300000, guid: 8f666cb4be481804a9bf44bfbfb322f7, type: 3}
+  - {fileID: 8300000, guid: c70d02891b6e9134393866e44bb7faa3, type: 3}
   neverRepeat: 0
   loopStart: 0
   loopEnd: 0

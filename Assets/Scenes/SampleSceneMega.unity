@@ -1535,10 +1535,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Songs
       objectReference: {fileID: 0}
+    - target: {fileID: 1731980195212076371, guid: 6232600707ee39043bae4855fc2acd0d, type: 3}
+      propertyPath: audio
+      value: 
+      objectReference: {fileID: 11400000, guid: f9bd6ce7980e13d428452463ebc336fb, type: 2}
     - target: {fileID: 7082825445369462420, guid: 6232600707ee39043bae4855fc2acd0d, type: 3}
       propertyPath: audio
       value: 
       objectReference: {fileID: 11400000, guid: d6243e79baf0c7545b64bf512f623bd7, type: 2}
+    - target: {fileID: 7082825445369462420, guid: 6232600707ee39043bae4855fc2acd0d, type: 3}
+      propertyPath: keepPlaybackPosition
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2193,7 +2201,7 @@ SpriteShapeRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
+  m_DynamicOccludee: 0
   m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
