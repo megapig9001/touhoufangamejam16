@@ -23,6 +23,7 @@ public class PlayerHealth : MonoBehaviour
     private SpriteRenderer playerSpriteRenderer, hurtSpriteRenderer;
     [SerializeField]
     private GameObject playerFine, playerHurt;
+    [SerializeField] Color hurtColor;
 
     [SerializeField]
     private ParticleSystem collisionEffect;
@@ -77,7 +78,7 @@ public class PlayerHealth : MonoBehaviour
 
         playerFine.SetActive(false);
         playerHurt.SetActive(true);
-        hurtSpriteRenderer.color = Color.blue;
+        hurtSpriteRenderer.color = hurtColor;
 
         yield return new WaitForSeconds(playerInvulnerabilitySeconds);
         playerHurt.SetActive(false);

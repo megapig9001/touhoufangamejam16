@@ -6,6 +6,7 @@ public class LevelGoal : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("PlayerHead"))
         {
+            JSAM.AudioManager.PlaySound(AudioLibrarySounds.Clear);
             new EventManager.PlayerReachGoalEvent().InvokeEvent();
         }
 

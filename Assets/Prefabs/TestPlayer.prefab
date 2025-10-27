@@ -326,6 +326,7 @@ MonoBehaviour:
   hurtSpriteRenderer: {fileID: 2936775359297403289}
   playerFine: {fileID: 93013180566020782}
   playerHurt: {fileID: 7210666261372028630}
+  hurtColor: {r: 1, g: 0.7311321, b: 0.7311321, a: 1}
   collisionEffect: {fileID: 8938545449487004539}
 --- !u!114 &172217341209656033
 MonoBehaviour:
