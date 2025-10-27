@@ -148,6 +148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3f6305b05af3fd48bb90930ce332644, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerHealingColor: {r: 0.99215686, g: 0.54901963, b: 0.9254902, a: 1}
 --- !u!1 &7358235424102004088
 GameObject:
   m_ObjectHideFlags: 0
