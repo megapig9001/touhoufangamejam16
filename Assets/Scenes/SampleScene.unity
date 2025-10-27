@@ -1678,10 +1678,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2936775359297403289, guid: 6ab18a33cf0175a4e9ca2fe35038cfd2, type: 3}
-      propertyPath: m_SortingOrder
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 3508113455890310528, guid: 6ab18a33cf0175a4e9ca2fe35038cfd2, type: 3}
       propertyPath: baseHealth
       value: 4
@@ -1705,10 +1701,6 @@ PrefabInstance:
     - target: {fileID: 3976520487257845833, guid: 6ab18a33cf0175a4e9ca2fe35038cfd2, type: 3}
       propertyPath: m_Color.r
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3976520487257845833, guid: 6ab18a33cf0175a4e9ca2fe35038cfd2, type: 3}
-      propertyPath: m_SortingOrder
-      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3976520487257845833, guid: 6ab18a33cf0175a4e9ca2fe35038cfd2, type: 3}
       propertyPath: m_WasSpriteAssigned
