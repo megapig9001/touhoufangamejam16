@@ -12,7 +12,7 @@ public class HealingZone : MonoBehaviour
             PlayerHealth playerHealth = collision.gameObject.GetComponentInParent<PlayerHealth>();
             playerHealth.SetHealth(playerHealth.BaseHealth);
             playerHealth.CanTakeDamage = false;
-            playerHealth.SetPlayerSpriteColor(Color.magenta);
+            playerHealth.SetPlayerSpriteColor(playerHealingColor);
             JSAM.AudioManager.PlaySound(AudioLibrarySounds.Heal);
         }
 

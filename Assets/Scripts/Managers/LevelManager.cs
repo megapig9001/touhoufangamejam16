@@ -2,6 +2,7 @@ using EventManager;
 using System;
 using System.Collections;
 using UnityEngine;
+using DG.Tweening;
 
 /// <summary>
 /// A Manager for the current level. A level manager should exist for each scene (level).
@@ -67,7 +68,7 @@ public class LevelManager : MonoBehaviour
         //Fail safe in case a transition is already occurring
         if (handlingLevelOpening != null || handlingLevelEnding != null || handlingLevelRestart != null)
             return;
-        handlingLevelEnding = StartCoroutine(HandleLevelEnding());
+        handlingLevelEnding = StartCoroutine(HandleLevelEnding(info));
     }
 
     private void StartLevel()
@@ -95,11 +96,29 @@ public class LevelManager : MonoBehaviour
         handlingLevelOpening = null;
     }
 
-    private IEnumerator HandleLevelEnding()
+    private IEnumerator HandleLevelEnding(PlayerReachGoalEvent eventInfo)
     {
-        player.gameObject.SetActive(false);
+        //Play win animation
+        Rigidbody2D rigidbody2D = player.GetComponent<Rigidbody2D>();
+        rigidbody2D.simulated = false;
+
+        var moving = player.transform.DOMove(eventInfo.goalPosition, 0.2f);
+
+        yield return new WaitForSeconds(0.1f);
+
+        var spinning = player.transform.DORotate(Vector3.forward*360*4, 4f, RotateMode.FastBeyond360);
+
+        yield return new WaitForSeconds(1.6f);
 
         yield return GameManager.instance.TransitionExpandAndCollapseIn();
+
+        spinning.Kill();
+        moving.Kill();
+
+        player.gameObject.SetActive(false);
+        rigidbody2D.simulated = true;
+        player.transform.rotation = Quaternion.identity;
+        //end win animation
 
         if (GameManager.instance.EnteredCurrentLevelFromLevelSelectMenu)
         {

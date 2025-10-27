@@ -82,7 +82,7 @@ namespace EventManager
 
     public class PlayerReachGoalEvent : Event<PlayerReachGoalEvent>
     {
-
+        public Vector2 goalPosition = Vector2.zero;
     }
     
     public class LevelRestartEvent : Event<LevelRestartEvent>
