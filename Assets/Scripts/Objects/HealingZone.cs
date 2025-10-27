@@ -13,6 +13,7 @@ public class HealingZone : MonoBehaviour
             playerHealth.SetHealth(playerHealth.BaseHealth);
             playerHealth.CanTakeDamage = false;
             playerHealth.SetPlayerSpriteColor(playerHealingColor);
+            playerHealth.SetPlayerSpriteHappy();
             JSAM.AudioManager.PlaySound(AudioLibrarySounds.Heal);
         }
 
@@ -28,6 +29,7 @@ public class HealingZone : MonoBehaviour
                 return;
             playerHealth.CanTakeDamage = true;
             playerHealth.SetPlayerSpriteColor(Color.white);
+            playerHealth.SetPlayerSpriteDefault();
         }
     }
 }

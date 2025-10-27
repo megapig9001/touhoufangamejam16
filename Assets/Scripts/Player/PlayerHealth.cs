@@ -21,6 +21,9 @@ public class PlayerHealth : MonoBehaviour
 
     [SerializeField]
     private SpriteRenderer playerSpriteRenderer, hurtSpriteRenderer;
+    [SerializeField] Sprite playerDefaultSprite;
+    [SerializeField] Sprite playerHappySprite;
+
     [SerializeField]
     private GameObject playerFine, playerHurt;
     [SerializeField] Color hurtColor;
@@ -128,6 +131,7 @@ public class PlayerHealth : MonoBehaviour
 
         SetHealth(BaseHealth);
         playerSpriteRenderer.color = Color.white;
+        SetPlayerSpriteDefault();
     }
 
     public void SetPlayerSpriteColor(Color color)
@@ -144,5 +148,15 @@ public class PlayerHealth : MonoBehaviour
     {
         collisionEffect.transform.position = collisionPoint;
         collisionEffect.Play();
+    }
+
+    public void SetPlayerSpriteDefault()
+    {
+        playerSpriteRenderer.sprite = playerDefaultSprite;
+    }
+
+    public void SetPlayerSpriteHappy()
+    {
+        playerSpriteRenderer.sprite = playerHappySprite;
     }
 }

@@ -324,6 +324,8 @@ MonoBehaviour:
   playerInvulnerabilitySeconds: 0.5
   playerSpriteRenderer: {fileID: 3976520487257845833}
   hurtSpriteRenderer: {fileID: 2936775359297403289}
+  playerDefaultSprite: {fileID: -9153053171897987194, guid: 91f6cec701ad2e1478bfbca3344e2816, type: 3}
+  playerHappySprite: {fileID: 2459044527121752420, guid: b98287f072f06f74ca6adcd519fe1926, type: 3}
   playerFine: {fileID: 93013180566020782}
   playerHurt: {fileID: 7210666261372028630}
   hurtColor: {r: 1, g: 0.7311321, b: 0.7311321, a: 1}
@@ -605,7 +607,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 4
   m_Sprite: {fileID: -6744424511582059133, guid: d93d020c839f02d49873705bb6d32e8c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

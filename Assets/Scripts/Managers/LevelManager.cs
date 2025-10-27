@@ -99,6 +99,7 @@ public class LevelManager : MonoBehaviour
     private IEnumerator HandleLevelEnding(PlayerReachGoalEvent eventInfo)
     {
         //Play win animation
+        player.gameObject.GetComponent<PlayerHealth>().SetPlayerSpriteHappy();
         Rigidbody2D rigidbody2D = player.GetComponent<Rigidbody2D>();
         rigidbody2D.simulated = false;
 
@@ -106,7 +107,7 @@ public class LevelManager : MonoBehaviour
 
         yield return new WaitForSeconds(0.1f);
 
-        var spinning = player.transform.DORotate(Vector3.forward*360*4, 4f, RotateMode.FastBeyond360);
+        var spinning = player.transform.DORotate(Vector3.forward*360*4.2f, 4f, RotateMode.FastBeyond360);
 
         yield return new WaitForSeconds(1.6f);
 
