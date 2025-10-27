@@ -2,7 +2,8 @@
         Hit,
         GetItem,
         Dash,
-        Heal
+        Heal,
+        Clear
     }
     public enum AudioLibraryMusic {
         Sekibanki,
