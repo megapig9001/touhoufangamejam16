@@ -156,7 +156,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1407.15, y: -707.6564}
+  m_AnchoredPosition: {x: 1407.15, y: -827.8632}
   m_SizeDelta: {x: 355, y: 88}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &11683766
@@ -173,6 +173,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneName: Rotate Level
   currentRecordText: {fileID: 1924882079}
+  levelPreviewRenderer: {fileID: 1403791530}
+  levelPreview: {fileID: 21300000, guid: 730b7b743c702354fab9f59f8dfe5bb7, type: 3}
 --- !u!114 &11683767
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -659,6 +661,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneName: Snake Level
   currentRecordText: {fileID: 1924882079}
+  levelPreviewRenderer: {fileID: 1403791530}
+  levelPreview: {fileID: 21300000, guid: 83b55989453ad644293e2c79c86b9b99, type: 3}
 --- !u!222 &179355487
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -684,7 +688,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 282.15002, y: -707.6564}
+  m_AnchoredPosition: {x: 282.15002, y: -827.8632}
   m_SizeDelta: {x: 355, y: 88}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &180120557
@@ -829,7 +833,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 657.15, y: -815.6564}
+  m_AnchoredPosition: {x: 1032.15, y: -935.8632}
   m_SizeDelta: {x: 355, y: 88}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &356959229
@@ -999,7 +1003,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 282.15002, y: -815.6564}
+  m_AnchoredPosition: {x: 657.15, y: -935.8632}
   m_SizeDelta: {x: 355, y: 88}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &381791922
@@ -1016,6 +1020,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneName: Thanks Level
   currentRecordText: {fileID: 1924882079}
+  levelPreviewRenderer: {fileID: 1403791530}
+  levelPreview: {fileID: 21300000, guid: 483f6651cc83c15438db5ffebba4f783, type: 3}
 --- !u!114 &381791923
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1226,7 +1232,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 123}
+  m_AnchoredPosition: {x: 490, y: 176.61298}
   m_SizeDelta: {x: 926.8053, y: 418.1384}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &573341139
@@ -1800,7 +1806,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1032.15, y: -599.6564}
+  m_AnchoredPosition: {x: 1032.15, y: -719.8632}
   m_SizeDelta: {x: 355, y: 88}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &722504075
@@ -1911,6 +1917,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneName: Dash Level
   currentRecordText: {fileID: 1924882079}
+  levelPreviewRenderer: {fileID: 1403791530}
+  levelPreview: {fileID: 21300000, guid: 1c2fb7d03889a38469d07986cf96298f, type: 3}
 --- !u!1 &852896691
 GameObject:
   m_ObjectHideFlags: 0
@@ -2410,8 +2418,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Back
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c2565e30d6092e44f90328d84d557dbc, type: 2}
+  m_sharedMaterial: {fileID: -6861674001507085031, guid: c2565e30d6092e44f90328d84d557dbc, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3023,7 +3031,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 282.15002, y: -599.6564}
+  m_AnchoredPosition: {x: 282.15002, y: -719.8632}
   m_SizeDelta: {x: 355, y: 88}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1243244725
@@ -3040,6 +3048,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneName: Opening Level
   currentRecordText: {fileID: 1924882079}
+  levelPreviewRenderer: {fileID: 1403791530}
+  levelPreview: {fileID: 21300000, guid: a81c0ad3d01f3344987fc4422fa67b0d, type: 3}
 --- !u!1 &1261672745
 GameObject:
   m_ObjectHideFlags: 0
@@ -3160,6 +3170,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneName: Pachinko Level
   currentRecordText: {fileID: 1924882079}
+  levelPreviewRenderer: {fileID: 1403791530}
+  levelPreview: {fileID: 21300000, guid: 0de756987637a6a4eb121aa0fdf64ca4, type: 3}
 --- !u!222 &1261672749
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3185,7 +3197,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 657.15, y: -707.6564}
+  m_AnchoredPosition: {x: 657.15, y: -827.8632}
   m_SizeDelta: {x: 355, y: 88}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1261967023
@@ -3487,7 +3499,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 282.15002, y: -815.6564}
+  m_AnchoredPosition: {x: 282.15002, y: -935.8632}
   m_SizeDelta: {x: 355, y: 88}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1339742220
@@ -3504,6 +3516,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneName: Koakuma Level
   currentRecordText: {fileID: 1924882079}
+  levelPreviewRenderer: {fileID: 1403791530}
+  levelPreview: {fileID: 21300000, guid: 0d5d5feec56d1c344b15a8e56f61280e, type: 3}
 --- !u!114 &1339742221
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3734,6 +3748,81 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1393288177}
   m_CullTransparentMesh: 1
+--- !u!1 &1403791528
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1403791529}
+  - component: {fileID: 1403791531}
+  - component: {fileID: 1403791530}
+  m_Layer: 0
+  m_Name: LevelPreview
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1403791529
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1403791528}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.9, y: 0.9, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1532808456}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 687, y: 543}
+  m_SizeDelta: {x: 1080, y: 607.5}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1403791530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1403791528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.8509804}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 483f6651cc83c15438db5ffebba4f783, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 1
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1403791531
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1403791528}
+  m_CullTransparentMesh: 1
 --- !u!1 &1409812146
 GameObject:
   m_ObjectHideFlags: 0
@@ -3880,6 +3969,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1621337498}
+  - {fileID: 1403791529}
   - {fileID: 573341138}
   m_Father: {fileID: 1261967024}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4256,8 +4346,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -66.27316}
-  m_SizeDelta: {x: 1689.3, y: 893.6564}
+  m_AnchoredPosition: {x: 0, y: -6.1698}
+  m_SizeDelta: {x: 1689.3, y: 1013.8632}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1621337499
 MonoBehaviour:
@@ -4690,7 +4780,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1032.15, y: -707.6564}
+  m_AnchoredPosition: {x: 1032.15, y: -827.8632}
   m_SizeDelta: {x: 355, y: 88}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1828225430
@@ -4707,6 +4797,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneName: Wing Level
   currentRecordText: {fileID: 1924882079}
+  levelPreviewRenderer: {fileID: 1403791530}
+  levelPreview: {fileID: 21300000, guid: 77a069dcb6c20f34886eeb4d6b3436c0, type: 3}
 --- !u!114 &1828225431
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5060,7 +5152,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 657.15, y: -599.6564}
+  m_AnchoredPosition: {x: 657.15, y: -719.8632}
   m_SizeDelta: {x: 355, y: 88}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1854050561
@@ -5085,6 +5177,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneName: Speed Up Level
   currentRecordText: {fileID: 1924882079}
+  levelPreviewRenderer: {fileID: 1403791530}
+  levelPreview: {fileID: 21300000, guid: f44aa2c95c3311a42a939fed2ded31b9, type: 3}
 --- !u!1 &1924882077
 GameObject:
   m_ObjectHideFlags: 0
@@ -5398,6 +5492,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneName: SampleSceneMega
   currentRecordText: {fileID: 1924882079}
+  levelPreviewRenderer: {fileID: 1403791530}
+  levelPreview: {fileID: 21300000, guid: f4b5e862e354d6a4282c4633a747fbf3, type: 3}
 --- !u!222 &1955733095
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5423,7 +5519,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1407.15, y: -599.6564}
+  m_AnchoredPosition: {x: 1407.15, y: -719.8632}
   m_SizeDelta: {x: 355, y: 88}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2122400250

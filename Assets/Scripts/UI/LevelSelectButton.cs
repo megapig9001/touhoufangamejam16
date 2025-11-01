@@ -10,6 +10,10 @@ public class LevelSelectButton : MonoBehaviour, ISelectHandler
 
     [SerializeField] TextMeshProUGUI currentRecordText;
 
+    [SerializeField] Image levelPreviewRenderer;
+
+    [SerializeField] Sprite levelPreview;
+
     private Button button;
 
     public void OnSelect(BaseEventData eventData)
@@ -21,6 +25,8 @@ public class LevelSelectButton : MonoBehaviour, ISelectHandler
             currentRecordText.text = "99:99.99";
         else
             currentRecordText.text = ConvertFloatTimeToString(savedRecordTime);
+
+        levelPreviewRenderer.sprite = levelPreview;
     }
 
     void Awake()
