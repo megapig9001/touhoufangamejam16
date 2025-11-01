@@ -32,4 +32,9 @@ public class Rotater : MonoBehaviour
             transform.rotation = Quaternion.Euler(0, 0, 0);
         }
     }
+    public void ResetRotate()
+    {
+        canRotate = false;
+        transform.rotation = Quaternion.Euler(0, 0, 0);
+    }
 }
