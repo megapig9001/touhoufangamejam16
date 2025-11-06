@@ -132,7 +132,7 @@ GameObject:
   - component: {fileID: 177688111}
   - component: {fileID: 177688114}
   m_Layer: 0
-  m_Name: Open Sprite Shape
+  m_Name: InsideBorderBottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -358,12 +358,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 177688110}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -32.92, y: -25.57, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -18.329998, y: -30.362999, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 214298431}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!68 &177688114
 EdgeCollider2D:
@@ -493,7 +493,9 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1530054767}
+  - {fileID: 177688113}
   - {fileID: 1800986173}
+  - {fileID: 858191946}
   - {fileID: 397696198}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -894,7 +896,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 214298431}
     m_Modifications:
     - target: {fileID: 283139606510485134, guid: 97595fec03ac3ee48afb69e3fcd55f35, type: 3}
       propertyPath: m_Name
@@ -902,7 +904,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8143895246505258996, guid: 97595fec03ac3ee48afb69e3fcd55f35, type: 3}
       propertyPath: m_SortingOrder
-      value: -1
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8458734637362603500, guid: 97595fec03ac3ee48afb69e3fcd55f35, type: 3}
       propertyPath: m_LocalScale.y
@@ -910,11 +912,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8458734637362603500, guid: 97595fec03ac3ee48afb69e3fcd55f35, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -39.33
+      value: -24.740002
       objectReference: {fileID: 0}
     - target: {fileID: 8458734637362603500, guid: 97595fec03ac3ee48afb69e3fcd55f35, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -19.8618
+      value: -24.6548
       objectReference: {fileID: 0}
     - target: {fileID: 8458734637362603500, guid: 97595fec03ac3ee48afb69e3fcd55f35, type: 3}
       propertyPath: m_LocalPosition.z
@@ -926,15 +928,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8458734637362603500, guid: 97595fec03ac3ee48afb69e3fcd55f35, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8458734637362603500, guid: 97595fec03ac3ee48afb69e3fcd55f35, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8458734637362603500, guid: 97595fec03ac3ee48afb69e3fcd55f35, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8458734637362603500, guid: 97595fec03ac3ee48afb69e3fcd55f35, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1181,6 +1183,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &858191946 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8458734637362603500, guid: 97595fec03ac3ee48afb69e3fcd55f35, type: 3}
+  m_PrefabInstance: {fileID: 577165308}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &920896248
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1407,7 +1414,7 @@ GameObject:
   - component: {fileID: 1530054765}
   - component: {fileID: 1530054768}
   m_Layer: 0
-  m_Name: Open Sprite Shape
+  m_Name: LevelOutsideBorder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2483,6 +2490,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2476837825059634119, guid: 675a1424908e89849b44f877e1ccf904, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7182954536091939367, guid: 675a1424908e89849b44f877e1ccf904, type: 3}
       propertyPath: m_Name
       value: DashEnableItem
@@ -2513,7 +2524,7 @@ GameObject:
   - component: {fileID: 1825935507}
   - component: {fileID: 1825935506}
   m_Layer: 0
-  m_Name: Reimu Border
+  m_Name: BGTuah
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3492,5 +3503,3 @@ SceneRoots:
   - {fileID: 503865349}
   - {fileID: 543043611}
   - {fileID: 700950387}
-  - {fileID: 177688113}
-  - {fileID: 577165308}
