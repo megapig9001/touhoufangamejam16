@@ -11,5 +11,6 @@
         Talk,
         Cirno,
         Kage,
-        Seija
+        Seija,
+        BadApple
     }
