@@ -12,4 +12,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27aca8f6da03658478ee1dc44eab7429, type: 3}
   m_Name: ReimuLevel
   m_EditorClassIdentifier: 
-  <storyEventSteps>k__BackingField: []
+  <storyEventSteps>k__BackingField:
+  - stepName: Step 1
+    <eventImage>k__BackingField: {fileID: 4684745166226343026, guid: b047a083d6cb8f3469bfc6e92d50342b, type: 3}
+    <eventText>k__BackingField: 'Chiyo: Woah, I think we entered a parallel dimension! '
+    <playTransitionToNextStep>k__BackingField: 0
+  - stepName: Step 1
+    <eventImage>k__BackingField: {fileID: 4684745166226343026, guid: b047a083d6cb8f3469bfc6e92d50342b, type: 3}
+    <eventText>k__BackingField: 'Chiyo: Woah, I think we entered a parallel dimension! '
+    <playTransitionToNextStep>k__BackingField: 0
+  - stepName: Step 2
+    <eventImage>k__BackingField: {fileID: 4684745166226343026, guid: b047a083d6cb8f3469bfc6e92d50342b, type: 3}
+    <eventText>k__BackingField: 'Rusty: Everything here is just two colors!'
+    <playTransitionToNextStep>k__BackingField: 0
+  - stepName: Step 2
+    <eventImage>k__BackingField: {fileID: 4684745166226343026, guid: b047a083d6cb8f3469bfc6e92d50342b, type: 3}
+    <eventText>k__BackingField: 'Rusty: Why do I feel the sudden urge to display
+      myself on a graphing calculator?'
+    <playTransitionToNextStep>k__BackingField: 0

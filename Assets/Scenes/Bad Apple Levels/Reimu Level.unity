@@ -1134,7 +1134,7 @@ SpriteShapeRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
+  m_DynamicOccludee: 0
   m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -1995,7 +1995,7 @@ PrefabInstance:
     - target: {fileID: 7131816887081736531, guid: f8ddc11815e3d5c4baabf7875a12edfe, type: 3}
       propertyPath: storyEventToPlayOnStart
       value: 
-      objectReference: {fileID: 11400000, guid: 90d9bcdb8ebe7b3468424be5e5c887ea, type: 2}
+      objectReference: {fileID: 11400000, guid: 1bb6a00b0d11d47409e093709b15989c, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
