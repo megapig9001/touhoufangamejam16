@@ -235,6 +235,7 @@ GameObject:
   - component: {fileID: 3508113455890310528}
   - component: {fileID: 172217341209656033}
   - component: {fileID: 213643840907250910}
+  - component: {fileID: 1071885734728645607}
   m_Layer: 0
   m_Name: TestPlayer
   m_TagString: Player
@@ -326,6 +327,7 @@ MonoBehaviour:
   hurtSpriteRenderer: {fileID: 2936775359297403289}
   playerDefaultSprite: {fileID: -9153053171897987194, guid: 91f6cec701ad2e1478bfbca3344e2816, type: 3}
   playerHappySprite: {fileID: 2459044527121752420, guid: b98287f072f06f74ca6adcd519fe1926, type: 3}
+  playerBadAppleSprite: {fileID: 5412509410176645245, guid: 3d240465c6ee41340aae89dd88fa8e95, type: 3}
   playerFine: {fileID: 93013180566020782}
   playerHurt: {fileID: 7210666261372028630}
   hurtColor: {r: 1, g: 0.7311321, b: 0.7311321, a: 1}
@@ -376,6 +378,21 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &1071885734728645607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6757346364252871479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c7ec5a8074a60f48b5fbc5c5307765f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonSpriteRenderer: {fileID: 400493127061447703}
+  badAppleButton: {fileID: 7073546175111126515, guid: 32a804207c42bd341b387ec5eb2eed33, type: 3}
+  badAppleMode: 0
 --- !u!1 &7210666261372028630
 GameObject:
   m_ObjectHideFlags: 0

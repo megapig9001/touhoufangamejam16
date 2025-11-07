@@ -23,6 +23,8 @@ public class PlayerHealth : MonoBehaviour
     private SpriteRenderer playerSpriteRenderer, hurtSpriteRenderer;
     [SerializeField] Sprite playerDefaultSprite;
     [SerializeField] Sprite playerHappySprite;
+    [SerializeField] Sprite playerBadAppleSprite;
+
 
     [SerializeField]
     private GameObject playerFine, playerHurt;
@@ -30,6 +32,21 @@ public class PlayerHealth : MonoBehaviour
 
     [SerializeField]
     private ParticleSystem collisionEffect;
+
+    private BadAppleMode badAppleMode;
+
+    private void Awake()
+    {
+        //Handles sprite changes for Bad Apple Mode.
+        badAppleMode = GetComponent<BadAppleMode>();
+        if (badAppleMode.GetBadAppleMode())
+        {
+            playerDefaultSprite = playerBadAppleSprite;
+            playerHappySprite = playerBadAppleSprite;
+            playerSpriteRenderer.sprite = playerBadAppleSprite;
+            hurtSpriteRenderer.sprite = playerBadAppleSprite;
+        }
+    }
 
     private void Start()
     {
