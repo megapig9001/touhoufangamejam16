@@ -41,6 +41,8 @@ public class PlayerController : MonoBehaviour
 
     public bool InHitstun { get; private set; }
 
+    private bool SpeedUpRotation = false;
+
     private void Awake()
     {
         body = GetComponent<Rigidbody2D>();
@@ -67,7 +69,15 @@ public class PlayerController : MonoBehaviour
             return;
         }
 
-        float angle = body.rotation + CurrentDegreesPerSecond * Time.fixedDeltaTime;
+        float angle;
+        if (!SpeedUpRotation)
+        {
+            angle = body.rotation + CurrentDegreesPerSecond * Time.fixedDeltaTime;
+        }
+        else
+        {
+            angle = body.rotation + (CurrentDegreesPerSecond *2) * Time.fixedDeltaTime;
+        }
         body.MoveRotation(angle);
 
         if (Mathf.Abs(body.rotation) >= 360)
@@ -124,6 +134,14 @@ public class PlayerController : MonoBehaviour
 
         if (canMoveWithInput)
         {
+            if (inputSystem.actions["RotateSpeedUp"].IsPressed())
+            {
+                SpeedUpRotation = true;
+            }
+            else if (!inputSystem.actions["RotateSpeedUp"].IsPressed())
+            {
+                SpeedUpRotation = false;
+            }
             float speed = inputSystem.actions["SpeedUp"].IsPressed() ? CurrentMoveSpeed * fastMoveSpeedMultiplier : CurrentMoveSpeed;
 
             if (Mathf.Abs(xInput) > 0.001)
