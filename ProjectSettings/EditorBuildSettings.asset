@@ -9,36 +9,36 @@ EditorBuildSettings:
     path: Assets/Scenes/Title Screen.unity
     guid: 2d238fa15c68d844fb528396161af1ce
   - enabled: 1
+    path: Assets/Scenes/Bad Apple Levels/Reimu Level.unity
+    guid: 419d4a9e969e5bd41861407299d0b695
+  - enabled: 0
     path: Assets/Scenes/Opening Level.unity
     guid: 72c9238ecab0a9f4ab6666c0ad132495
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Speed Up Level.unity
     guid: c02e63fd69c4f9545a9b5e6461e1d399
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Dash Level.unity
     guid: 1360e5805ae229443b751ba6dc216848
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleSceneMega.unity
     guid: f85d4943aa388c94099ce550b295ca26
   - enabled: 0
-    path: Assets/Scenes/SampleScene.unity
-    guid: 8c9cfa26abfee488c85f1582747f6a02
-  - enabled: 1
     path: Assets/Scenes/Pachinko Level.unity
     guid: e5c023b63708dfe4a9da5d1987fbbd68
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Wing Level.unity
     guid: 18429d71596fc704cadaf7ec9854972d
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Rotate Level.unity
     guid: add50a44acb9f3d4b9359566d074cc31
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Thanks Level.unity
     guid: af5bb31b0bff77e4bb96ec7af0748698
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Snake Level.unity
     guid: c0a281d11cc9bb3458d0440c22d0881e
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Koakuma Level.unity
     guid: 2e30e7147265c85429052ddc1aac6e92
   m_configObjects:

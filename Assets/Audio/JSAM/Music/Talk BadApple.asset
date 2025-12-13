@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bfb8002b44af6934a9ae327c8311d458, type: 3}
-  m_Name: Sekibanki
+  m_Name: Talk BadApple
   m_EditorClassIdentifier: 
   safeName: 
   presetDescription: 
   files:
-  - {fileID: 8300000, guid: 5ae5032be4781ef41b4f6ca021498c6a, type: 3}
+  - {fileID: 8300000, guid: 7e0c78643c02210498380e8bfc2c184f, type: 3}
   neverRepeat: 0
-  loopStart: 0
-  loopEnd: 33.802
+  loopStart: 1.656
+  loopEnd: 14.897
   bpm: 120
   relativeVolume: 1
   spatialize: 0
@@ -26,13 +26,13 @@ MonoBehaviour:
   priority: 128
   startingPitch: 1
   pitchShift: 0
-  loopMode: 1
+  loopMode: 2
   delay: 0
   ignoreTimeScale: 0
   maxPlayingInstances: 10
   channelOverride: 1
   mixerGroupOverride: {fileID: 0}
-  fadeInOut: 1
+  fadeInOut: 0
   fadeInDuration: 0
   fadeOutDuration: 0
   bypassEffects: 0

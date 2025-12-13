@@ -15,10 +15,10 @@ MonoBehaviour:
   safeName: 
   presetDescription: 
   files:
-  - {fileID: 8300000, guid: 28fae0bc89da60942b8ea6dde71eae8d, type: 3}
+  - {fileID: 8300000, guid: 023cf8475b56fb14c829871f6c7988d7, type: 3}
   neverRepeat: 0
-  loopStart: 0
-  loopEnd: 217.87283
+  loopStart: 6.967
+  loopEnd: 47.227
   bpm: 120
   relativeVolume: 1
   spatialize: 0
@@ -26,11 +26,11 @@ MonoBehaviour:
   priority: 128
   startingPitch: 1
   pitchShift: 0
-  loopMode: 1
+  loopMode: 2
   delay: 0
   ignoreTimeScale: 0
   maxPlayingInstances: 10
-  channelOverride: 0
+  channelOverride: 1
   mixerGroupOverride: {fileID: 0}
   fadeInOut: 0
   fadeInDuration: 0
